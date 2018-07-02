@@ -1,7 +1,117 @@
 doctype html
-html
+html(lang="ru-Ru")
   head
-    title= title
+    title Silver Dragoon "От заката до рассвета"
+    meta(charset='UTF-8')
+    meta(name='robots' content='index,follow')
+    meta(name='description' content="Silver Dragoon 'От заката до рассвета' - Сайт Silver Dragoon'а о аниме 'Shakugan no Shana' и игре 'Legend of Dragoon'")
+    meta(name='keywords' content='игра psone psx playstation legend of dragoon legendofdragoon мультимедиа games обзор Shakugan no Shana shakugannoshana RUS аниме RPG jRPG сериал обои кадры заставки OVA AMV Itadaki no Hecatetan Shanatan movie полнометражка полнометражный от заката до рассвета закат рассвет фотография фотографии silver dragoon')
+    //meta(name='copyright' content="(c) Silver-Dragoon.UcoZ.Ru")
+    meta(name='revisit-after' content='1 days')
+    link(rel='stylesheet', href='/stylesheets/my.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+
+  body(bgcolor='#cccccc')
+    div(align='center')
+      center
+        // Header
+        table(cellspacing='0' cellpadding='0' width='100%' border='0')
+          tbody
+            tr
+              td(valign='top' align='left' width=478 background='/images/banner-left.jpg')
+                img(src='/images/banner-left.jpg' width=478)
+              td(valign='top' align='center' width='100%' bgcolor='#000000')
+              td(valign='top' align='right' width=550 background='/images/banner-right.jpg')
+                img(src='/images/banner-right.jpg' width=550)
+
+        table(cellspacing='0' cellpadding='0' width='100%' border='0')
+          tr
+            td(valign='top' width='200')
+              br
+              table(cellspacing='0' cellpadding='0' width='200' border='0')
+                tr
+                  td(align='center' style="background: url('/images/left.jpg') #000; height: 24px; color: #FFF;")
+                    b Меню
+                tr
+                  td(style="background: url('/images/5.gif') #FFF;padding:5px;border:3px double #FFF;")
+                    ul.uz
+                      li.m
+                        a.m(href='/') Главная страница
+                      li.m
+                        a.m(href='/projekt') Информация о проектах сайтов
+                      li.m
+                        a.m(href='/photo') Фотографии и заставки
+                      li.m
+                        a.m(href='http://silver-dragoon.ucoz.ru/forum/') Форум
+                      li.m
+                        a.m(href='/adminsuite') Администрация сайта
+                      li.m
+                        a.m(href='/reklama') Реклама сайта и баннеры
+                      li.m
+                        a.m(href='/gb') Гостевая книга
+                      li.m
+                        a.m(href='/svyas') Обратная связь
+            td(valign='top' width='100%' style='padding:0px 10px 0px 10px;')
+              br
+              table(cellspacing='0' cellpadding='0' width='100%' border='0')
+                tr
+                  td(align='center' style="background: url('/images/4.gif') #FFF;border:1px double #FFF; height: 24px; color: #FFF;")
+                    b Главное окно
+                tr
+                  td(style="background: url('/images/5.gif') #FFF;border:3px double #FFF;")
+
+                    block content
+
+            td(valign='top' width='200')
+              br
+              table(cellspacing='0' cellpadding='0' width='200' border='0')
+                tr
+                  td(align='center' style="background: url('/images/left.jpg') #000; height: 24px; color: #FFF;")
+                    b Опрос
+                tr
+                  td(style="background: url('/images/5.gif') #FFF;padding:5px;border:3px double #FFF;")
+                    table(cellspacing='0' cellpadding='1' width='100%' border='0')
+                      tr
+                        td(style='font-family: tahoma, sans-serif; text-align: justify')
+                          | Как вам мой сайт? Как вам дизайн сайта?
+                          br
+                          .answer
+                            | 1.
+                            span(title='Голосов: 130 (44%)') Супер
+                            div(style='padding-top:3px;')
+                              div(style='width:57px;background:#2144DA;height:3px')
+                                img(src='http://src.ucoz.ru/img/1px.gif' height='3' width='57')
+                          .answer
+                            | 2.
+                            span(title='Голосов: 70 (23%)') Хорошо, но не супер
+                            div(style='padding-top:3px;')
+                              div(style='width:30px;background:#A1523A;height:3px')
+                                img(src='http://src.ucoz.ru/img/1px.gif' height='3' width='30')
+                          .answer
+                            | 3.
+                            span(title='Голосов: 43 (14%)') Ужос, просто ужос
+                            div(style='padding-top:3px;')
+                              div(style='width:18px;background:#189721;height:3px')
+                                img(src='http://src.ucoz.ru/img/1px.gif' height='3' width='18')
+                          .answer
+                            | 4.
+                            span(title='Голосов: 36 (12%)') Нормалекс
+                            div(style='padding-top:3px;')
+                              div(style='width:15px;background:#0B6C24;height:3px')
+                                img(src='http://src.ucoz.ru/img/1px.gif' height='3' width='15')
+                          .answer
+                            | 5.
+                            span(title='Голосов: 14 (4%)') Плохо Федя, плохо
+                            div(style='padding-top:3px;')
+                              div(style='width:6px;background:#E3BF6A;height:3px')
+                                img(src='http://src.ucoz.ru/img/1px.gif' height='3' width='6')
+
+
+                      tr
+                        td(align='center')
+                          br
+                          a Результаты
+                          | ·
+                          a Архив опросов
+                          br
+                          br
