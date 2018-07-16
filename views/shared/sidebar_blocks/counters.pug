@@ -1,0 +1,10 @@
+extends ../sidebar_block
+
+block title_sideblock
+  b Рейтинги / Счетчики
+
+block body_sideblock
+  marquee(onmouseover='this.stop()' onmouseout='this.start()' scrollAmount=2 scrollDelay=50 direction='up' height=140)
+    br
+    center
+      img(src='/images/ucoz-counter.jpg' height='31' width='88')

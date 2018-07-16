@@ -1,0 +1,55 @@
+extends ../sidebar_block
+
+block title_sideblock
+  b Shakugan no Shana
+
+block body_sideblock
+  ul.uz
+    li.m
+      a.m(href='/shana/info') Информация о сериале
+    li.m
+      a.m(href="javascript:void%20Menu('1')" style='text-decoration: none') Видео раздел
+      #1(style='display: none')
+        br
+        ul.uz
+          li.m
+            a.m(href='/shana/video/1season') 1 сезон
+          li.m
+            a.m(href='/shana/video/2season') 2 сезон
+          li.m
+            a.m(href='/shana/video/ove') OVA
+          li.m
+            a.m(href='/shana/video/special') Спецвыпуски
+          li.m
+            a.m(href='/shana/video/movie') Полнометражка(Movie)
+          li.m
+            a.m(href='/shana/video/amv') AMV Клипы
+    li.m
+      a.m(href="javascript:void%20Menu('2')" style='text-decoration: none') Галерея
+      #2(style='display: none')
+        br
+        ul.uz
+          li.m
+            a.m(href='/shana/gallery/avatars') Аватары
+          li.m
+            a.m(href='/shana/gallery/animation') Анимация
+          li.m
+            a.m(href='/shana/gallery/frame') Кадры из сериала
+          li.m
+            a.m(href='/shana/gallery/subpic') Картинки в подпись
+          li.m
+            a.m(href='/shana/gallery/wallpapers') Обои
+          li.m
+            a.m(href='/shana/gallery/wallpapers-psp') Обои для PSP
+          li.m
+            a.m(href='/shana/gallery/jokes') Приколы
+          li.m
+            a.m(href='/shana/gallery/simple-pics') Простые картинки
+          li.m
+            a.m(href='/shana/gallery/scans') Сканы
+          li.m
+            a.m(href='/shana/gallery/userbars') Юзербары
+    li.m
+      a.m(href='/shana/music') Музыкальный раздел
+
+
