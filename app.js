@@ -8,6 +8,7 @@ const logger = require('morgan');
 const app = express();
 
 const settings = JSON.parse(fs.readFileSync(path.join(__dirname, 'config', 'settings.json'), 'utf8'));
+global.appRoot = path.resolve(__dirname);
 
 // view engine setup
 app.set('view engine', 'pug');

@@ -1,5 +1,21 @@
 extends ../layouts/application
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #allEntries
+    each newsItem in news
+      table.entryTable(border='0' width='100%' cellspacing='1' cellpadding='2')
+        tr
+          td.entryTitleTd(style='width:90%')
+            .entryTitle
+              span.entryTitleLink!= newsItem.title
+          td(align='right' nowrap='nowrap' style='font:8px;')= newsItem.date
+        tr
+          td.entryBodyTd(colspan='2')!= newsItem.body
+        tr
+          td.entryDetailsTd(colspan='2')
+            | Просмотров: #{newsItem.views} | Добавил:
+            span.entryUserLink= newsItem.author
+            |  | Rating: #{newsItem.rating} |
+            span.entryCommentLink &#32;Коментарии (#{newsItem.comments})
+            hr.entryHr
+      br
