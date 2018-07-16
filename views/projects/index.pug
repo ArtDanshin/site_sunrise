@@ -1,0 +1,44 @@
+extends ../layouts/application
+
+block title
+  = pageTitle
+
+block content
+  each project, index in projects
+    if index !== 0
+      hr(size=1)
+    center
+      b!= project.title
+    hr(size=1)
+    center
+      img(src=project.image border=1)
+    br
+    div(align='justify')
+      b Дата начача проекта:&#32;
+      = project.dateBegin
+      br
+      if project.dateEnd
+        b Дата окончания проекта:&#32;
+        = project.dateEnd
+        br
+      b Ссылка на проект:&#32;
+      each link, index in project.links
+        if index !== 0
+          | &#32;и&#32;
+        a(href=link)= link
+      br
+      b Скриншот проекта:&#32;
+      a(href=project.screenshot) Скачать (#{project.screenshotSize} Кб)
+      br
+      b Состояние проекта:&#32;
+      = project.status
+      br
+      b Чему посвящен проект:&#32;
+      != project.info
+      br
+      b Что уникального в этом проекте:&#32;
+      != project.uniqInfo
+      br
+      b О проекте от его создателя:&#32;
+      != project.aboutInfo
+      br
