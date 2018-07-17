@@ -14,11 +14,11 @@ exports.projects = function(req, res) {
 };
 
 exports.adminsite = function(req, res) {
-  res.render('adminsite', { title: '' });
+  res.render('adminsite', { pageTitle: 'Администрация сайта' });
 };
 
 exports.promo = function(req, res) {
-  res.render('promo', { title: '' });
+  res.render('promo', { pageTitle: 'Реклама сайта и баннеры' });
 };
 
 exports.gb = function(req, res) {
