@@ -1,8 +1,6 @@
-const root      = require('../controllers/root');
-// const portfolio = require('../app/controllers/portfolio');
-// const blog      = require('../app/controllers/blog');
-// const topic     = require('../app/controllers/topic');
-// const about     = require('../app/controllers/about');
+const root   = require('../controllers/root');
+const lod    = require('../controllers/lod');
+const shana  = require('../controllers/shana');
 
 module.exports = app => {
   app.get('/', root.home);
@@ -12,12 +10,16 @@ module.exports = app => {
   app.get('/gb', root.gb);
   app.get('/feedback', root.feedback);
 
-  // app.get('/portfolio', portfolio.show);
-  // app.get('/portfolio/:item', portfolio.item);
-  //
-  // app.get('/blog', blog.show);
-  //
-  // app.get('/topic/:id', topic.show);
-  //
-  // app.get('/about', about.show);
+  app.get('/lod', lod.info);
+  app.get('/lod/articles', lod.articles);
+  app.get('/lod/worldmap', lod.worldmap);
+  app.get('/lod/gallery', lod.gallery);
+  app.get('/lod/video', lod.video);
+  app.get('/lod/music', lod.music);
+  app.get('/lod/faq', lod.faq);
+
+  app.get('/shana', shana.info);
+  app.get('/shana/video', shana.video);
+  app.get('/shana/gallery', shana.gallery);
+  app.get('/shana/music', shana.music);
 };
