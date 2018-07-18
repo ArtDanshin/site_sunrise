@@ -28,5 +28,5 @@ exports.gb = function(req, res) {
 };
 
 exports.feedback = function(req, res) {
-  res.render('feedback', { title: '' });
+  res.render('feedback', { pageTitle: 'Обратная связь' });
 };
