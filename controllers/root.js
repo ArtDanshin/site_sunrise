@@ -22,7 +22,9 @@ exports.promo = function(req, res) {
 };
 
 exports.gb = function(req, res) {
-  res.render('gb', { title: '' });
+  const gbPosts = JSON.parse(fs.readFileSync(path.join(appRoot, 'db', 'gb.json'), 'utf8'));
+
+  res.render('gb', { pageTitle: 'Гостевая книга', gbPosts });
 };
 
 exports.feedback = function(req, res) {
