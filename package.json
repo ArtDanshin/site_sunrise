@@ -18,18 +18,18 @@
     "url": "https://github.com/ArtDanshin/site_sunrise/issues"
   },
   "homepage": "https://github.com/ArtDanshin/site_sunrise#readme",
-  "engines" : {
-    "node" : ">=8.9.1 <11.0.0"
+  "engines": {
+    "node": ">=8.9.1 <11.0.0"
   },
   "dependencies": {
-    "async": "^2.6.1",
-    "cheerio": "^1.0.0-rc.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11",
-    "request": "^2.87.0"
+    "async": "2.6.3",
+    "cheerio": "^1.0.0-rc.3",
+    "cookie-parser": "1.4.4",
+    "debug": "2.6.9",
+    "express": "4.17.1",
+    "http-errors": "1.7.3",
+    "morgan": "1.9.1",
+    "pug": "2.0.4",
+    "request": "2.88.0"
   }
 }
