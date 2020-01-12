@@ -8,7 +8,7 @@ const categories = new Set();
 const lists = new Set();
 const listsDone = new Set();
 const imagesUrl = new Set();
-const images = [];
+let images = [];
 
 const INTERVAL_FOR_REQUESTS = 30000;
 
@@ -16,6 +16,9 @@ requestToGalleryCategories('/')
   .then(interateOfLists)
   .then(interateOfImage)
   .then(writeToImageBD);
+
+// Если нужно подправить уже записанные данные, то эта функция для этого
+// modifyJSON();
 
 /**
  * Получение списка всех категорий галереи
@@ -139,6 +142,8 @@ function requestToImage(imagePageUrl) {
         const image = {
           title: $('.photo-etitle').text(),
           category: imagePageUrl.split('/')[3],
+          slug: imagePageUrl.split('/')[4],
+          url: imagePageUrl,
           originImageInfo: ($('.dd-tip.ulightbox').length)
             ? {
               src: $('.dd-tip.ulightbox').attr('href'),
@@ -174,8 +179,7 @@ function requestToImage(imagePageUrl) {
               }
             };
           }).get(),
-          rating: $('.phd-rating span').text(),
-          url: imagePageUrl
+          rating: $('.phd-rating span').text()
         };
 
         images.push(image);
@@ -186,6 +190,26 @@ function requestToImage(imagePageUrl) {
   })
 };
 
+/**
+ * Запись результатов в json файл
+ */
 function writeToImageBD() {
   fs.writeFileSync(path.join(__dirname, '..', 'db', 'gallery.json'), JSON.stringify({categories: Array.from(categories), images}));
+}
+
+/**
+ * Доработки JSON файла после первого прохождения по всем картинкам галереи
+ */
+function modifyJSON() {
+  const gallery = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'db', 'gallery.json'), 'utf8'));
+
+  images = gallery.images;
+
+  requestToList('/photo/lod/posters/18-1')
+    .then(interateOfImage)
+    .then(() => {
+      gallery.images = images;
+
+      fs.writeFileSync(path.join(__dirname, '..', 'db', 'gallery.json'), JSON.stringify(gallery));
+    });
 }
