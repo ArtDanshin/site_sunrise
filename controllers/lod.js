@@ -10,10 +10,6 @@ exports.worldmap = function(req, res) {
   res.render('lod/worldmap', { pageTitle: '' });
 };
 
-exports.gallery = function(req, res) {
-  res.render('lod/gallery', { pageTitle: '' });
-};
-
 exports.video = function(req, res) {
   res.render('lod/video', { pageTitle: '' });
 };

@@ -1,0 +1,44 @@
+extends ../layouts/application
+
+block title
+  = pageTitle
+
+block content
+  table(border='0' cellpadding='0' cellspacing='0' width='100%')
+    tr
+      td(colspan='3' class='topBorder' style='padding:3px;' valign='top')
+        table(border='0' width='100%' cellspacing='1' cellpadding='2')
+          tr
+            td(width='50%' style='white-space: nowrap;')
+              = 'Фотографий в разделе: '
+              b= images.length
+            td(align='right')
+              | Страницы: 1
+          tr
+            td(colspan='2' align='center')
+              hr
+              table(style='width:100%; min-width:900px' border='0' cellspacing='0' cellpadding='0' align='center')
+                tr
+                  td
+                    ul.allEntriesTable.u-ecc-4#uEntriesList
+                      each image, index in images
+                        li.phtTdMain.uEntryWrap
+                          div#entryID9.entryBlock
+                            span.uphoto
+                              span.photo-block
+                                span.ph-wrap
+                                  span.ph-tc
+                                    img(src=`/images/gallery/${image.category}/thumb/${image.slug}.jpg`)
+                                  a.ph-link(href='#')
+                                    span.ph-tc
+                                      span.ph-data
+                                        span.ph-date= image.title
+                                        span.ph-descr Открыть в отдельном окне
+                                span.ph-details.ph-js-details
+                                  span.phd-views= image.views
+                                  a.phd-comments(href='#')= image.comments.length
+                                  span.phd-rating
+                                    span#entRating9= image.rating
+          tr
+            td(colspan='2' align='center')
+              | $PAGE_SELECTOR1$

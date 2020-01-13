@@ -12,10 +12,14 @@ let images = [];
 
 const INTERVAL_FOR_REQUESTS = 30000;
 
+// requestToGalleryCategories('/')
+//   .then(interateOfLists)
+//   .then(interateOfImage)
+//   .then(writeToImageBD);
+
 requestToGalleryCategories('/')
-  .then(interateOfLists)
-  .then(interateOfImage)
-  .then(writeToImageBD);
+  .then(interateOfCategories)
+  .then(modifyJJSONcategory);
 
 // Если нужно подправить уже записанные данные, то эта функция для этого
 // modifyJSON();
@@ -45,6 +49,48 @@ function requestToGalleryCategories(siteUrl) {
       resolve();
     });
   });
+}
+
+/**
+ * Запрос информации обо всех категориях
+ * @returns {Promise<void>}
+ */
+async function interateOfCategories() {
+  const categoriesValues = categories.values();
+  let category = null;
+
+  while (category = categoriesValues.next().value) {
+    await requestToCategoryInfo(category);
+  }
+
+  console.log('End requests to categies info', Array.from(categories));
+}
+
+/**
+ * Получение списка всех категорий галереи и добавление в него новой информации
+ * @param {Object} category Информация о категории
+ * @param {string} category.url Ссылка на страницу
+ * @param {string} category.slug Идентификатор категории
+ * @returns {Promise<unknown>}
+ */
+function requestToCategoryInfo(category) {
+  console.log('Request to -> ', category.url);
+
+  return new Promise(resolve => {
+    setTimeout(() => {
+      request(HOST + category.url, function(err, res, body) {
+        if (err) throw err;
+        const $ = cheerio.load(body, {
+          decodeEntities: false
+        });
+
+        category.title = $('title').text().split(' - ')[0];
+        category.description = $('meta[name="description"]').attr('content');
+
+        resolve();
+      });
+    }, INTERVAL_FOR_REQUESTS)
+  })
 }
 
 /**
@@ -212,4 +258,13 @@ function modifyJSON() {
 
       fs.writeFileSync(path.join(__dirname, '..', 'db', 'gallery.json'), JSON.stringify(gallery));
     });
+}
+
+/**
+ * Добавление дополнительной информации по категориям в JSON
+ */
+function modifyJJSONcategory() {
+  const gallery = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'db', 'gallery.json'), 'utf8'));
+
+  fs.writeFileSync(path.join(__dirname, '..', 'db', 'gallery.json'), JSON.stringify({categories: Array.from(categories), images: gallery.images}));
 }
