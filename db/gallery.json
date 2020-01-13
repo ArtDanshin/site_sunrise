@@ -2,67 +2,99 @@
   "categories": [
     {
       "url": "/photo/lod/lod_wallpaper/2-1",
-      "slug": "lod_wallpaper"
+      "slug": "lod_wallpaper",
+      "title": "Обои по игре",
+      "description": "Огромное кол-во обоев по игре The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/dart_red_dragoon/3-1",
-      "slug": "dart_red_dragoon"
+      "slug": "dart_red_dragoon",
+      "title": "Дарт (Red-Eye Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Дарта из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/lavitc_jade_dragoon/6-1",
-      "slug": "lavitc_jade_dragoon"
+      "slug": "lavitc_jade_dragoon",
+      "title": "Лавитц (The Jade Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Лавитца из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/shana_silver_dragoon/4-1",
-      "slug": "shana_silver_dragoon"
+      "slug": "shana_silver_dragoon",
+      "title": "Шана (Silver Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Шаны из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/rose_darkness_dragoon/5-1",
-      "slug": "rose_darkness_dragoon"
+      "slug": "rose_darkness_dragoon",
+      "title": "Rose (Darkness Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Розы из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/hashel_violet_dragoon/16-1",
-      "slug": "hashel_violet_dragoon"
+      "slug": "hashel_violet_dragoon",
+      "title": "Хашель (Violet Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Хашела из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/albert_jade_dragoon/7-1",
-      "slug": "albert_jade_dragoon"
+      "slug": "albert_jade_dragoon",
+      "title": "Альберт (The Jade Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Альберт из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/meru_blue_sea_dragoon/9-1",
-      "slug": "meru_blue_sea_dragoon"
+      "slug": "meru_blue_sea_dragoon",
+      "title": "Меру (Blue-Sea Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Меру из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/kongol_golden_dragoon/17-1",
-      "slug": "kongol_golden_dragoon"
+      "slug": "kongol_golden_dragoon",
+      "title": "Конгол (Golden Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Конгола из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/miranda_silver_dragoon/8-1",
-      "slug": "miranda_silver_dragoon"
+      "slug": "miranda_silver_dragoon",
+      "title": "Миранда (White-Silver Dragoon)",
+      "description": "Обои, модели, портреты и многое другое с участием Миранды из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/other_heroes/10-1",
-      "slug": "other_heroes"
+      "slug": "other_heroes",
+      "title": "Другие герои и персонажи",
+      "description": "Обои, модели, портреты и многое другое с участием многих второстепенных персонажей из The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/endiness_world/13-1",
-      "slug": "endiness_world"
+      "slug": "endiness_world",
+      "title": "Мир Endiness и окрестности",
+      "description": "Красивые картины самых разных мест со всего мира Endiness из игры The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/posters/18-1",
-      "slug": "posters"
+      "slug": "posters",
+      "title": "Постеры",
+      "description": "Постеры по мотивам игры The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/promo_cd_merc/15-1",
-      "slug": "promo_cd_merc"
+      "slug": "promo_cd_merc",
+      "title": "Промо, CD, Фигурки и т.п.",
+      "description": "Сканы и фотографии различных промо, CD, фигурок и т.п. по мотивам игры The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/fan_art_lod/14-1",
-      "slug": "fan_art_lod"
+      "slug": "fan_art_lod",
+      "title": "Фан-арт по игре",
+      "description": "Творчество фанатов игры The Legend of Dragoon"
     },
     {
       "url": "/photo/lod/logo/11-1",
-      "slug": "logo"
+      "slug": "logo",
+      "title": "Логотип",
+      "description": "Различные изображения логотипа игры The Legend of Dragoon"
     }
   ],
   "images": [
