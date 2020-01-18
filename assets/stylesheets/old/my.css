@@ -28,7 +28,6 @@ a.menu1:link {text-decoration:none; color:#444444}
 a.menu1:visited {text-decoration:none; color:#444444}
 a.menu1:hover {text-decoration:underline; color:#444444}
 
-.topBorder {border-left:1px solid #444444; border-right:1px solid #444444;}
 .topMenu {border:1px solid #444444; padding:2px;}
 /* ------------- */
 
@@ -107,7 +106,7 @@ a.catNameActive:active {text-decoration:underline; color:#444444;}
 /* ------------------ */
 
 /* Comments Style */
-.commAllTd {padding-bottom:5px;}
+.commAllTd {padding: 5px;}
 .commSwitchesTd {}
 .commBodyTable {border:1px dotted #A9B8C2;}
 .commNumTd,.commNameTd,.commDateTd {border-bottom:1px dotted #A9B8C2;background:#F4F4F4;}
@@ -199,6 +198,8 @@ a.calmonthlink:active,a.calmdaylink:active {text-decoration:underline;}
 .phtTable {width:100%;background:#F4F4F4;border:1px dotted #A9B8C2;}
 .phtTd {width:40%;height:100px;background:#E8ECF5;padding:3px;border-right:1px dotted #A9B8C2;}
 .phtDetailsTd {width:60%;padding:3px}
+
+.photo-edetails {text-align:center;}
 /* ----------- */
 
 /* Photo Advice to Friend */

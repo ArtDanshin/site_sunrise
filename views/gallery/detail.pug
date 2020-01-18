@@ -1,0 +1,97 @@
+extends ../layouts/application
+
+block title
+  = pageTitle
+
+block content
+  table(border='0' cellpadding='0' cellspacing='0' width='100%')
+    tr
+      td(colspan='3' style='padding:3px;' valign='top')
+        #u-photos
+          .uphoto-entry
+            h2.photo-etitle= image.title
+            .photo-edescr= image.description
+            .u-center
+              .photo-block
+                .ph-wrap
+                  span.photo-expand
+                    center
+                      span#phtmDiv35
+                        span#phtmSpan35(style='position:relative')
+                          img#p339879414(border='0' src=`/images/gallery/${image.originImageInfo.filename}` width=image.originImageInfo.width height=image.originImageInfo.height)
+
+                      a.dd-tip.ulightbox(href=`/images/gallery/${image.originImageInfo.filename}` target='_blank')
+                        i.expand-ico
+                        | В реальном размере
+                        b= ` ${image.originImageInfo.width}x${image.originImageInfo.height}`
+                        = ` / ${image.originImageInfo.size / 1000}Kb`
+                .photo-edetails.ph-js-details
+                  span.phd-views= image.views
+                  span.phd-comments= image.comments.length
+                  span.phd-rating
+                    span#entRating9= (Math.round(image.rating * 100) / 100).toFixed(1)
+          .photo-slider.u-center
+            #phtOtherThumbs.phtThumbs
+              table(border="0" cellpadding="0" cellspacing="0")
+                tbody
+                  tr
+                    td
+                      a#leftSwch.leftSwitcher(href='#' rel='nofollow')
+                    td(align='center' style="white-space: nowrap;")
+                      div#oldPhotos
+                        span.animate-wrap
+                          a.otherPhotoA(href=`/gallery/detail/${otherImages[0].slug}`)
+                            span.ph-wrap
+                              span.ph-tc
+                                img.otherPhoto(border="0" src=`/images/gallery/thumb/${otherImages[0].thumbImageInfo.filename}`)
+                          a.photoActiveA(href=`/gallery/detail/${otherImages[1].slug}`)
+                            span.ph-wrap
+                              span.ph-tc
+                                img.photoActive(border="0" src=`/images/gallery/thumb/${otherImages[1].thumbImageInfo.filename}`)
+                          a.otherPhotoA(href=`/gallery/detail/${otherImages[2].slug}`)
+                            span.ph-wrap
+                              span.ph-tc
+                                img.otherPhoto(border="0" src=`/images/gallery/thumb/${otherImages[2].thumbImageInfo.filename}`)
+                    td
+                      a#rightSwch.rightSwitcher(href="#" rel="nofollow")
+        hr
+        table(border='0' cellpadding='0' cellspacing='0' width='100%')
+          tr
+            td(width='60%' height='25')
+              = 'Всего комментариев: '
+              b= image.comments.length
+          tr
+            td(colspan='2' height='10')
+
+        //- Блок комментариев
+        if image.comments.length
+          #allEntries
+            each comment, index in image.comments
+              table(border="0" cellpadding="0" cellspacing="0" width="100%" class="commBodyTable")
+                tr
+                  td.commNumTd(style="padding:3px;")
+                    .commName(style="text-align:left;")
+                      a(href="#")
+                        b= image.comments.length - index
+                      = ' '
+                      a(href="#")
+                        b= comment.userInfo.name
+                      | &nbsp;
+                      span(style="font-size:7pt;unicode-bidi:embed;")= (comment.date)
+                tr
+                  td.commAllTd
+                    .cMessage(style="text-align:left;clear:both;padding:2px 0;")
+                      a(href="#" title=comment.userInfo.name style="padding-right:4px;")
+                        span.user_avatar
+                          img(alt="" align="left" src=comment.userInfo.avatar.src width="30" height="30" border="0")
+                      = comment.message
+              br
+
+        .commReg(align='center')
+          | Добавлять комментарии могут только зарегистрированные пользователи.
+          br
+          = ' [ '
+          a(href='#') Регистрация
+          = ' | '
+          a(href='#') Вход
+          = ' ]'

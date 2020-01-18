@@ -128,7 +128,7 @@
           "userInfo": {
             "name": "silver-dragoon",
             "avatar": {
-              "src": "/avatar/06/469348.jpg",
+              "src": "/images/no_avatar-web.jpg",
               "width": 30,
               "height": 30
             }
@@ -141,7 +141,7 @@
           "userInfo": {
             "name": "silver-dragoon",
             "avatar": {
-              "src": "/avatar/06/469348.jpg",
+              "src": "/images/no_avatar-web.jpg",
               "width": 30,
               "height": 30
             }
@@ -181,14 +181,14 @@
       ],
       "originImageInfo": {
         "filename": "2_lod_wallpaper_6.jpg",
-        "size": 491455,
-        "height": 1200,
-        "width": 1600,
+        "size": 129528,
+        "height": 768,
+        "width": 1024,
         "format": "jpg"
       },
       "thumbImageInfo": {
         "filename": "2_lod_wallpaper_6.jpg",
-        "size": 8843,
+        "size": 8681,
         "height": 150,
         "width": 200,
         "format": "jpg"
