@@ -31,5 +31,9 @@
     "morgan": "1.9.1",
     "pug": "2.0.4",
     "request": "2.88.0"
+  },
+  "devDependencies": {
+    "image-size": "0.8.3",
+    "sharp": "0.24.0"
   }
 }
