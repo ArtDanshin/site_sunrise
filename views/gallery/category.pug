@@ -6,7 +6,7 @@ block title
 block content
   table(border='0' cellpadding='0' cellspacing='0' width='100%')
     tr
-      td(colspan='3' class='topBorder' style='padding:3px;' valign='top')
+      td(colspan='3' style='padding:3px;' valign='top')
         table(border='0' width='100%' cellspacing='1' cellpadding='2')
           tr
             td(width='50%' style='white-space: nowrap;')
@@ -28,15 +28,15 @@ block content
                               span.photo-block
                                 span.ph-wrap
                                   span.ph-tc
-                                    img(src=`/images/gallery/${image.category}/thumb/${image.slug}.jpg`)
-                                  a.ph-link(href='#')
+                                    img(src=`/images/gallery/thumb/${image.thumbImageInfo.filename}`)
+                                  a.ph-link(href=`/gallery/detail/${image.slug}`)
                                     span.ph-tc
                                       span.ph-data
                                         span.ph-date= image.title
                                         span.ph-descr Открыть в отдельном окне
                                 span.ph-details.ph-js-details
                                   span.phd-views= image.views
-                                  a.phd-comments(href='#')= image.comments.length
+                                  span.phd-comments= image.comments.length
                                   span.phd-rating
                                     span#entRating9= image.rating
           tr

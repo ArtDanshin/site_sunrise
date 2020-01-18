@@ -12,7 +12,7 @@ module.exports = app => {
   app.get('/feedback', root.feedback);
 
   app.get('/gallery/:category/', gallery.category);
-  app.get('/gallery/:category/:image', gallery.image);
+  app.get('/gallery/detail/:image', gallery.image);
 
   app.get('/lod', lod.info);
   app.get('/lod/articles', lod.articles);
