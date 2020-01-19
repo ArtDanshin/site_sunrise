@@ -4,4 +4,60 @@ block title
   = pageTitle
 
 block content
-  include ./videos.html
+  table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 0px 2px;')
+    tr
+      td(width='80%' style='padding: 2px 2px 0px 2px;')
+        | &nbsp;
+        a(href='/') Главная страница
+        = ` » Видео » ${pageTitle}`
+      td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
+  hr
+  table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 0px 2px;')
+    tr
+      td(width='60%' style='padding: 2px 2px 0px 2px;')
+        = '&nbsp;Всего материалов в каталоге: '
+        b= videos.length
+        br
+        = '&nbsp;Показано материалов: '
+        b
+          span.numShown73= `1-${videos.length}`
+      td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
+        = 'Страницы: '
+        span.pagesBlockuz1
+          | [
+          b 1
+          | ]
+  hr
+  #allEntries
+    each video, index in videos
+      div(id=`#entryID11${index}`)
+        table.entryTable(border='0' width='100%' cellspacing='0' cellpadding='2')
+          tr
+            td.entryTitleTd(width='90%')
+              .entryTitle
+                | &nbsp;
+                a(href=`/videos/detail/${video.slug}`)= video.title
+            td(align='right' nowrap)
+          tr
+            td.entryBodyTd(colspan='2')
+              != video.previewBody
+          tr
+            td.entryDetailsTd(colspan='2')
+              = 'Просмотров: '
+              span.entryReads= video.views
+              = ` | Добавил: ${video.author}`
+              = ' | Рейтинг: '
+              span.entryRating= (Math.round(video.rating * 100) / 100).toFixed(1)
+              = ' | '
+              a.entryCommentLink(href=`/videos/detail/${video.slug}`)= `Коментарии (${video.comments.length})`
+              = ` | Добавлено: ${video.publishDate}`
+      hr.entryHr(align='right')
+  hr
+  table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 5px 2px;')
+    tr
+      td(width='100%' style='padding: 2px 2px 7px 2px;')
+        center
+          span.pagesBlockuz2
+            | [
+            b= `1-${videos.length}`
+            | ]

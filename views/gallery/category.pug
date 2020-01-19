@@ -73,7 +73,7 @@ block content
                                   span.phd-views= image.views
                                   span.phd-comments= image.comments.length
                                   span.phd-rating
-                                    span#entRating9= image.rating
+                                    span#entRating9= (Math.round(image.rating * 100) / 100).toFixed(1)
           tr
             td(colspan='2' align='center')
               span.pagesBlockuz2

@@ -1,5 +1,46 @@
 {
-  "categories": [],
+  "categories": [
+    {
+      "slug": "sns_season1",
+      "title": "Shakugan no Shana - 1 сезон",
+      "description": ""
+    },
+    {
+      "slug": "sns_season2",
+      "title": "Shakugan no Shana - 2 сезон",
+      "description": ""
+    },
+    {
+      "slug": "sns_ova",
+      "title": "Shakugan no Shana - OVA",
+      "description": ""
+    },
+    {
+      "slug": "sns_special",
+      "title": "Shakugan no Shana - Спецвыпуски",
+      "description": ""
+    },
+    {
+      "slug": "sns_movie",
+      "title": "Shakugan no Shana - Полнометражка(Movie)",
+      "description": ""
+    },
+    {
+      "slug": "sns_amv",
+      "title": "Shakugan no Shana - AMV клипы",
+      "description": ""
+    },
+    {
+      "slug": "lod_gamevideo",
+      "title": "The Legend of Dragoon - Видео из игры",
+      "description": ""
+    },
+    {
+      "slug": "lod_amv",
+      "title": "The Legend of Dragoon - AMV клипы",
+      "description": ""
+    }
+  ],
   "videos": [
     {
       "title": "Shakugan no Shana - 1 сезон - 1 серия",
