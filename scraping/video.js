@@ -4,7 +4,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 
 const URL = 'http://localhost:3000/video/bla';
-const tokenToRubyMineServer = '_ijt=g3ulo8qd4764h4g8v6kcb2p1ep';
+const tokenToRubyMineServer = '_ijt=98nl89o3cg1de3cqaavd1hm6qb';
 const videos = [];
 
 requestToVideosPage(URL)
@@ -28,8 +28,8 @@ function requestToVideosPage(url) {
 
           videos.push({
             title: $(el).find('.entryTitle a').html(),
-            slug: `sns_season1_${i + 1}`,
-            category: ['sns_season1'],
+            slug: `sns_special_${i + 1}`,
+            category: ['sns_special'],
             views: parseInt($(el).find('.entryReads').html()),
             author: $(el).find('.entryDetailsTd').html().match(/Добавил\:\s([a-zA-Z]+)/gm)[0].match(/[a-zA-Z]+/gm)[0],
             rating: parseFloat($(el).find('.entryRating').html()),
@@ -52,7 +52,7 @@ async function requestToDetailPage() {
 
   while (index < videos.length) {
     await new Promise(resolve => {
-      request(`http://localhost:63342/site_sunrise/SnS-Video-1seasson-${index + 1}.htm?${tokenToRubyMineServer}`, function (err, res, body) {
+      request(`http://localhost:63342/site_sunrise/SnS-Video-Special-${index + 1}.htm?${tokenToRubyMineServer}`, function (err, res, body) {
         if (err) throw err;
         const $ = cheerio.load(body, {
           decodeEntities: false
@@ -62,6 +62,8 @@ async function requestToDetailPage() {
 
         resolve();
       });
+
+      console.log(index, videos.length);
     });
 
     index++;
@@ -69,6 +71,8 @@ async function requestToDetailPage() {
 }
 
 function writetoDb() {
-  fs.writeFileSync(path.join(__dirname, '..', 'db', 'video.json'), JSON.stringify({ categories: [], videos }));
+  const completedVideos = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'db', 'video.json'), 'utf8'));
+
+  fs.writeFileSync(path.join(__dirname, '..', 'db', 'video_new.json'), JSON.stringify({ categories: [...completedVideos.categories], videos: [...completedVideos.videos, ...videos] }));
 
 }
