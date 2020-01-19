@@ -1,5 +1,6 @@
 const root   = require('../controllers/root');
 const gallery  = require('../controllers/gallery');
+const video  = require('../controllers/video');
 const lod    = require('../controllers/lod');
 const shana  = require('../controllers/shana');
 
@@ -15,6 +16,8 @@ module.exports = app => {
   app.get('/gallery/:category', gallery.category);
   app.get('/gallery/detail/:image', gallery.image);
 
+  app.get('/video/:category', video.category);
+
   app.get('/lod', lod.info);
   app.get('/lod/articles', lod.articles);
   app.get('/lod/worldmap', lod.worldmap);
@@ -23,7 +26,5 @@ module.exports = app => {
   app.get('/lod/faq', lod.faq);
 
   app.get('/shana', shana.info);
-  app.get('/shana/video', shana.video);
-  app.get('/shana/gallery', shana.gallery);
   app.get('/shana/music', shana.music);
 };
