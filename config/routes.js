@@ -11,7 +11,8 @@ module.exports = app => {
   app.get('/gb', root.gb);
   app.get('/feedback', root.feedback);
 
-  app.get('/gallery/:category/', gallery.category);
+  app.get('/gallery/:category/:page', gallery.category);
+  app.get('/gallery/:category', gallery.category);
   app.get('/gallery/detail/:image', gallery.image);
 
   app.get('/lod', lod.info);

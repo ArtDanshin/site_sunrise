@@ -4,19 +4,44 @@ const fs = require('fs');
 exports.category = function(req, res) {
   const gallery = getGalleriesInfo();
   const category = gallery.categories.find(cat => cat.slug === req.params.category);
+  const IMAGES_PER_PAGE = 16;
 
   if (category) {
-    const images = gallery.images.filter(image => image.category.includes(req.params.category));
+    const pageNumber = req.params.page && parseInt(req.params.page);
 
-    if (images.length) {
-      res.render('gallery/category', {
-        pageTitle: category.title,
-        images: gallery.images.filter(image => image.category.includes(req.params.category))
-      });
+    if (pageNumber) {
+      const images = gallery.images.filter(image => image.category.includes(req.params.category));
+      const totalImages = images.length;
+
+      if (images.length) {
+        const pageNumber = req.params.page && parseInt(req.params.page);
+        const numberOfFirstImageOnPage = (pageNumber - 1) ? IMAGES_PER_PAGE * (pageNumber - 1): 0;
+
+        if (!pageNumber || images[numberOfFirstImageOnPage]) {
+          const urlToCategory = `/gallery/${req.params.category}/`;
+
+          res.render('gallery/category', {
+            pageTitle: category.title,
+            currentPage: pageNumber,
+            imagesPerPage: IMAGES_PER_PAGE,
+            totalImages,
+            urlToCategory,
+            images: gallery.images.filter(image => image.category.includes(req.params.category))
+              .splice(numberOfFirstImageOnPage, IMAGES_PER_PAGE)
+          });
+        } else {
+          res.status(404).end()
+        }
+      } else {
+        res.render('under_construction', {
+          pageTitle: category.title
+        });
+      }
     } else {
-      res.render('under_construction', {
-        pageTitle: category.title
-      });
+      let url = req.originalUrl;
+      if (url.substr(-1) != '/') url += '/';
+
+      res.redirect(url + '1');
     }
   } else {
     res.status(404).end()
