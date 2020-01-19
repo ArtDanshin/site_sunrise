@@ -6,10 +6,18 @@ exports.category = function(req, res) {
   const category = gallery.categories.find(cat => cat.slug === req.params.category);
 
   if (category) {
-    res.render('gallery/category', {
-      pageTitle: category.title,
-      images: gallery.images.filter(image => image.category.includes(req.params.category))
-    });
+    const images = gallery.images.filter(image => image.category.includes(req.params.category));
+
+    if (images.length) {
+      res.render('gallery/category', {
+        pageTitle: category.title,
+        images: gallery.images.filter(image => image.category.includes(req.params.category))
+      });
+    } else {
+      res.render('under_construction', {
+        pageTitle: category.title
+      });
+    }
   } else {
     res.status(404).end()
   }

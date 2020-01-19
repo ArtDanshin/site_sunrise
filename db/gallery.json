@@ -120,6 +120,26 @@
       "slug": "sns_avatars",
       "title": "Аватары Shakugan no Shana",
       "description": ""
+    },
+    {
+      "slug": "sns_frames",
+      "title": "Кадры из Shakugan no Shana",
+      "description": ""
+    },
+    {
+      "slug": "sns_scans",
+      "title": "Сканы различных материалов о Shakugan no Shana",
+      "description": ""
+    },
+    {
+      "slug": "sns_userbars",
+      "title": "Юзербары на тему Shakugan no Shana",
+      "description": ""
+    },
+    {
+      "slug": "sns_animation",
+      "title": "Анимации Shakugan no Shana",
+      "description": ""
     }
   ],
   "images": [
