@@ -17,6 +17,7 @@ module.exports = app => {
   app.get('/gallery/detail/:image', gallery.image);
 
   app.get('/video/:category', video.category);
+  app.get('/video/detail/:videoSlug', video.detail);
 
   app.get('/lod', lod.info);
   app.get('/lod/articles', lod.articles);

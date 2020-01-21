@@ -15,10 +15,10 @@ block content
   table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 0px 2px;')
     tr
       td(width='60%' style='padding: 2px 2px 0px 2px;')
-        = '&nbsp;Всего материалов в каталоге: '
+        != '&nbsp;Всего материалов в каталоге: '
         b= videos.length
         br
-        = '&nbsp;Показано материалов: '
+        != '&nbsp;Показано материалов: '
         b
           span.numShown73= `1-${videos.length}`
       td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
@@ -36,7 +36,7 @@ block content
             td.entryTitleTd(width='90%')
               .entryTitle
                 | &nbsp;
-                a(href=`/videos/detail/${video.slug}`)= video.title
+                a(href=`/video/detail/${video.slug}`)= video.title
             td(align='right' nowrap)
           tr
             td.entryBodyTd(colspan='2')
