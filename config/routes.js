@@ -12,17 +12,17 @@ module.exports = app => {
   app.get('/gb', root.gb);
   app.get('/feedback', root.feedback);
 
+  app.get('/gallery/detail/:image', gallery.image);
   app.get('/gallery/:category/:page', gallery.category);
   app.get('/gallery/:category', gallery.category);
-  app.get('/gallery/detail/:image', gallery.image);
 
-  app.get('/video/:category', video.category);
   app.get('/video/detail/:videoSlug', video.detail);
+  app.get('/video/:category/:page', video.category);
+  app.get('/video/:category', video.category);
 
   app.get('/lod', lod.info);
   app.get('/lod/articles', lod.articles);
   app.get('/lod/worldmap', lod.worldmap);
-  app.get('/lod/video', lod.video);
   app.get('/lod/music', lod.music);
   app.get('/lod/faq', lod.faq);
 

@@ -13,11 +13,10 @@ exports.category = function(req, res) {
       const images = gallery.images.filter(image => image.category.includes(req.params.category));
       const totalImages = images.length;
 
-      if (images.length) {
-        const pageNumber = req.params.page && parseInt(req.params.page);
+      if (totalImages) {
         const numberOfFirstImageOnPage = (pageNumber - 1) ? IMAGES_PER_PAGE * (pageNumber - 1): 0;
 
-        if (!pageNumber || images[numberOfFirstImageOnPage]) {
+        if (images[numberOfFirstImageOnPage]) {
           const urlToCategory = `/gallery/${req.params.category}/`;
 
           res.render('gallery/category', {
@@ -26,8 +25,7 @@ exports.category = function(req, res) {
             imagesPerPage: IMAGES_PER_PAGE,
             totalImages,
             urlToCategory,
-            images: gallery.images.filter(image => image.category.includes(req.params.category))
-              .splice(numberOfFirstImageOnPage, IMAGES_PER_PAGE)
+            images: images.splice(numberOfFirstImageOnPage, IMAGES_PER_PAGE)
           });
         } else {
           res.status(404).end()

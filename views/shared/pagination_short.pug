@@ -1,0 +1,36 @@
+mixin paginationShort(currentPage, total, perPage, urlToCategory)
+  = 'Страницы: '
+  span.pagesBlockuz1
+    - var totalPages = Math.ceil(total / perPage)
+    - var page = 0
+    - var leftDots = false
+    - var rightDots = false
+
+    while page < totalPages
+      - page++
+
+      if (page === 1) & (page !== currentPage)
+        a.swchItem(href=`${urlToCategory}${currentPage - 1}`)
+          span «
+        = ' '
+      if page === currentPage
+        b.swchItemA
+          span= page
+      else if (currentPage - page > 2) && ![1, 2].includes(page)
+        if !leftDots
+          - leftDots = true
+          span.swchItemDots
+            span ...
+      else if (page - currentPage > 2) && ![totalPages, totalPages - 1].includes(page)
+        if !rightDots
+          - rightDots = true
+          span.swchItemDots
+            span ...
+      else
+        a.swchItem(href=`${urlToCategory}${page}`)
+          span= page
+      = ' '
+
+      if (page === totalPages) & (page !== currentPage)
+        a.swchItem(href=`${urlToCategory}${currentPage + 1}`)
+          span »

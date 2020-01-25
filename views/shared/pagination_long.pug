@@ -1,0 +1,30 @@
+mixin paginationLong(currentPage, total, perPage, urlToCategory)
+  span.pagesBlockuz2
+    - var totalPages = Math.ceil(total / perPage)
+    - var page = 0
+    - var leftDots = false
+    - var rightDots = false
+
+    while page < totalPages
+      - page++
+      - var firstNumber = (page - 1) * perPage + 1
+      - var lastNumber = (page === totalPages) ? total : page * perPage
+      - var imagesPage = (firstNumber !== lastNumber) ? `${firstNumber}-${lastNumber}` : firstNumber
+
+      if page === currentPage
+        b.swchItemA
+          span= imagesPage
+      else if (currentPage - page > 2) && ![1, 2].includes(page)
+        if !leftDots
+          - leftDots = true
+          span.swchItemDots
+            span ...
+      else if (page - currentPage > 2) && ![totalPages, totalPages - 1].includes(page)
+        if !rightDots
+          - rightDots = true
+          span.swchItemDots
+            span ...
+      else
+        a.swchItem(href=`${urlToCategory}${page}`)
+          span= imagesPage
+      = ' '

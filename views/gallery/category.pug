@@ -13,41 +13,8 @@ block content
               = 'Фотографий в разделе: '
               b= totalImages
             td(align='right')
-              = 'Страницы: '
-              span.pagesBlockuz1
-                - var totalPages = Math.ceil(totalImages / imagesPerPage)
-                - var page = 0
-                - var leftDots = false
-                - var rightDots = false
-
-                while page < totalPages
-                  - page++
-
-                  if (page === 1) & (page !== currentPage)
-                    a.swchItem(href=`${urlToCategory}${currentPage - 1}`)
-                      span «
-                    = ' '
-                  if page === currentPage
-                    b.swchItemA
-                      span= page
-                  else if (currentPage - page > 2) && ![1, 2].includes(page)
-                    if !leftDots
-                      - leftDots = true
-                      span.swchItemDots
-                        span ...
-                  else if (page - currentPage > 2) && ![totalPages, totalPages - 1].includes(page)
-                    if !rightDots
-                      - rightDots = true
-                      span.swchItemDots
-                        span ...
-                  else
-                    a.swchItem(href=`${urlToCategory}${page}`)
-                      span= page
-                  = ' '
-
-                  if (page === totalPages) & (page !== currentPage)
-                    a.swchItem(href=`${urlToCategory}${currentPage + 1}`)
-                      span »
+              include ../shared/pagination_short
+              +paginationShort(currentPage, totalImages, imagesPerPage, urlToCategory)
 
           tr
             td(colspan='2' align='center')
@@ -76,32 +43,5 @@ block content
                                     span#entRating9= (Math.round(image.rating * 100) / 100).toFixed(1)
           tr
             td(colspan='2' align='center')
-              span.pagesBlockuz2
-                - var totalPages = Math.ceil(totalImages / imagesPerPage)
-                - var page = 0
-                - var leftDots = false
-                - var rightDots = false
-
-                while page < totalPages
-                  - page++
-                  - var firstNumber = (page - 1) * imagesPerPage + 1
-                  - var lastNumber = (page === totalPages) ? totalImages : page * imagesPerPage
-                  - var imagesPage = (firstNumber !== lastNumber) ? `${firstNumber}-${lastNumber}` : firstNumber
-
-                  if page === currentPage
-                    b.swchItemA
-                      span= imagesPage
-                  else if (currentPage - page > 2) && ![1, 2].includes(page)
-                    if !leftDots
-                      - leftDots = true
-                      span.swchItemDots
-                        span ...
-                  else if (page - currentPage > 2) && ![totalPages, totalPages - 1].includes(page)
-                    if !rightDots
-                      - rightDots = true
-                      span.swchItemDots
-                        span ...
-                  else
-                    a.swchItem(href=`${urlToCategory}${page}`)
-                      span= imagesPage
-                  = ' '
+              include ../shared/pagination_long
+              +paginationLong(currentPage, totalImages, imagesPerPage, urlToCategory)

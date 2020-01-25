@@ -16,17 +16,18 @@ block content
     tr
       td(width='60%' style='padding: 2px 2px 0px 2px;')
         != '&nbsp;Всего материалов в каталоге: '
-        b= videos.length
+        b= totalVideos
         br
         != '&nbsp;Показано материалов: '
         b
-          span.numShown73= `1-${videos.length}`
+          span.numShown73
+            - var firstNumber = (currentPage - 1) * videoPerPage + 1
+            = firstNumber
+            | -
+            = firstNumber + videos.length - 1
       td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
-        = 'Страницы: '
-        span.pagesBlockuz1
-          | [
-          b 1
-          | ]
+        include ../shared/pagination_short
+        +paginationShort(currentPage, totalVideos, videoPerPage, urlToCategory)
   hr
   #allEntries
     each video, index in videos
@@ -57,7 +58,5 @@ block content
     tr
       td(width='100%' style='padding: 2px 2px 7px 2px;')
         center
-          span.pagesBlockuz2
-            | [
-            b= `1-${videos.length}`
-            | ]
+          include ../shared/pagination_long
+          +paginationLong(currentPage, totalVideos, videoPerPage, urlToCategory)
