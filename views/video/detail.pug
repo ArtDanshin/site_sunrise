@@ -1,5 +1,7 @@
 extends ../layouts/application
 
+include ../mixins/formatter
+
 block title
   = pageTitle
 
@@ -22,7 +24,8 @@ block content
       tr
         td(width='85%')
           | [  Ссылка на скачивание находится в полном описании материала. Общий размер фаила составляет: ]
-        td.entryDateTd(align='right' style='white-space: nowrap;')= video.publishDate
+        td.entryDateTd(align='right' style='white-space: nowrap;')
+          +dateFormatter(video.publishDate, 'dateTime')
       tr
         td.entryTextTd(colspan='2')
           != video.mainBody

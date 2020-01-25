@@ -1,0 +1,17 @@
+mixin dateFormatter(timestamp, format)
+  -
+    function prependZero(number) {
+      return (number > 9) ? number : `0${number}`;
+    }
+
+  - var date = new Date(timestamp);
+  - var day = prependZero(date.getDate());
+  - var month = prependZero(date.getMonth() + 1);
+  - var hour = prependZero(date.getHours());
+  - var minutes = prependZero(date.getMinutes());
+
+  case format
+    when 'dateTime'
+      = `${day}.${month}.${date.getFullYear()} ${hour}:${minutes}`
+    default
+      = `${day}.${month}.${date.getFullYear()}`

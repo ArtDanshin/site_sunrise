@@ -1,5 +1,7 @@
 extends ../layouts/application
 
+include ../mixins/formatter
+
 block title
   = pageTitle
 
@@ -51,7 +53,8 @@ block content
               span.entryRating= (Math.round(video.rating * 100) / 100).toFixed(1)
               = ' | '
               a.entryCommentLink(href=`/videos/detail/${video.slug}`)= `Коментарии (${video.comments.length})`
-              = ` | Добавлено: ${video.publishDate}`
+              = ' | Добавлено: '
+              +dateFormatter(video.publishDate, 'dateTime')
       hr.entryHr(align='right')
   hr
   table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 5px 2px;')
