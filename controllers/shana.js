@@ -3,5 +3,7 @@ exports.info = function(req, res) {
 };
 
 exports.music = function(req, res) {
-  res.render('shana/music', { pageTitle: '' });
+  res.render('under_construction', {
+    pageTitle: 'Shakugan no Shana - Музыкальный архив'
+  });
 };

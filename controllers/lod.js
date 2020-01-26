@@ -7,7 +7,7 @@ exports.articles = function(req, res) {
 };
 
 exports.worldmap = function(req, res) {
-  res.render('lod/worldmap', { pageTitle: '' });
+  res.render('lod/map', { pageTitle: 'Карта мира Endiness' });
 };
 
 exports.music = function(req, res) {
@@ -15,5 +15,7 @@ exports.music = function(req, res) {
 };
 
 exports.faq = function(req, res) {
-  res.render('lod/faq', { pageTitle: '' });
+  res.render('under_construction', {
+    pageTitle: 'The Legend of Dragoon - FAQ по прохождению'
+  });
 };
