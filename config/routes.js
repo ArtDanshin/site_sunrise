@@ -1,6 +1,7 @@
 const root   = require('../controllers/root');
 const gallery  = require('../controllers/gallery');
 const video  = require('../controllers/video');
+const files  = require('../controllers/files');
 const lod    = require('../controllers/lod');
 const shana  = require('../controllers/shana');
 
@@ -19,6 +20,10 @@ module.exports = app => {
   app.get('/video/detail/:videoSlug', video.detail);
   app.get('/video/:category/:page', video.category);
   app.get('/video/:category', video.category);
+
+  app.get('/files/detail/:videoSlug', files.detail);
+  app.get('/files/:category/:page', files.category);
+  app.get('/files/:category', files.category);
 
   app.get('/lod', lod.info);
   app.get('/lod/articles', lod.articles);

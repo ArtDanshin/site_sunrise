@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 
 exports.category = function(req, res) {
-  console.log('category');
   const videosInfo = getVideosInfo();
   const category = videosInfo.categories.find(cat => cat.slug === req.params.category);
   const VIDEO_PER_PAGE = 5;
@@ -18,7 +17,7 @@ exports.category = function(req, res) {
         const numberOfFirstVideoOnPage = (pageNumber - 1) ? VIDEO_PER_PAGE * (pageNumber - 1): 0;
 
         if (videos[numberOfFirstVideoOnPage]) {
-          const urlToCategory = `/video/${req.params.category}/`;
+          const urlToCategory = `/video/${req.params.category}/1`;
 
           res.render('video/category', {
             pageTitle: category.title,
