@@ -1,6 +1,8 @@
 extends ../layouts/application
 
-include ../mixins/formatter
+include ../shared/pagination_short
+include ../shared/category_item
+include ../shared/pagination_long
 
 block title
   = pageTitle
@@ -28,38 +30,16 @@ block content
             | -
             = firstNumber + videos.length - 1
       td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
-        include ../shared/pagination_short
         +paginationShort(currentPage, totalVideos, videoPerPage, urlToCategory)
   hr
   #allEntries
     each video, index in videos
       div(id=`#entryID11${index}`)
-        table.entryTable(border='0' width='100%' cellspacing='0' cellpadding='2')
-          tr
-            td.entryTitleTd(width='90%')
-              .entryTitle
-                | &nbsp;
-                a(href=`/video/detail/${video.slug}`)= video.title
-            td(align='right' nowrap)
-          tr
-            td.entryBodyTd(colspan='2')
-              != video.previewBody
-          tr
-            td.entryDetailsTd(colspan='2')
-              = 'Просмотров: '
-              span.entryReads= video.views
-              = ` | Добавил: ${video.author}`
-              = ' | Рейтинг: '
-              span.entryRating= (Math.round(video.rating * 100) / 100).toFixed(1)
-              = ' | '
-              a.entryCommentLink(href=`/videos/detail/${video.slug}`)= `Коментарии (${video.comments.length})`
-              = ' | Добавлено: '
-              +dateFormatter(video.publishDate, 'dateTime')
+        +category_item(video, `/videos/detail/${video.slug}`)
       hr.entryHr(align='right')
   hr
   table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 5px 2px;')
     tr
       td(width='100%' style='padding: 2px 2px 7px 2px;')
         center
-          include ../shared/pagination_long
           +paginationLong(currentPage, totalVideos, videoPerPage, urlToCategory)
