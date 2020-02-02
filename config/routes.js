@@ -21,14 +21,13 @@ module.exports = app => {
   app.get('/video/:category/:page', video.category);
   app.get('/video/:category', video.category);
 
-  app.get('/files/detail/:videoSlug', files.detail);
+  app.get('/files/detail/:fileSlug', files.detail);
   app.get('/files/:category/:page', files.category);
   app.get('/files/:category', files.category);
 
   app.get('/lod', lod.info);
   app.get('/lod/articles', lod.articles);
   app.get('/lod/worldmap', lod.worldmap);
-  app.get('/lod/music', lod.music);
   app.get('/lod/faq', lod.faq);
 
   app.get('/shana', shana.info);

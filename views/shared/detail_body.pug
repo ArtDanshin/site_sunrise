@@ -1,0 +1,53 @@
+include ../mixins/formatter
+
+mixin detail_body(itemInfo, category)
+  .entryTitle(style='padding-bottom:3px;')
+    | &nbsp;&raquo;&nbsp;
+    h1(style='display:inline;')= itemInfo.title
+  table.entryTable(border='0' width='100%' cellspacing='0' cellpadding='2')
+    tbody
+      tr
+        td(width='85%')
+          | [ Ссылка на скачивание находится в полном описании материала.
+          if itemInfo.fileSize
+            = ` Общий размер фаила составляет: ${itemInfo.fileSize}МБ`
+          = ' ]'
+        td.entryDateTd(align='right' style='white-space: nowrap;')
+          +dateFormatter(itemInfo.publishDate, 'dateTime')
+      tr
+        td.entryTextTd(colspan='2')
+          != itemInfo.mainBody
+      tr
+        td.entryDetailsTd1(colspan='2')
+          = 'Категория: '
+          a.entryCatLink.entryCatLink(href=category.url)
+            = category.title
+          = ' | Добавил: '
+          = itemInfo.author
+          div(style='float:right')
+            ul#uStarRating23.uStarRating23.u-star-rating-12(title=`Рейтинг: ${(Math.round(itemInfo.rating.score * 100) / 100).toFixed(1)}/${itemInfo.rating.votes}`)
+              li#uCurStarRating23.u-current-rating.uCurStarRating23(style=`width:${itemInfo.rating.score * 20}%`)
+              li.u-star-li-23
+                a.u-one-star(href='#') 1
+              li.u-star-li-23
+                a.u-two-stars(href='#') 2
+              li.u-star-li-23
+                a.u-three-stars(href='#') 3
+              li.u-star-li-23
+                a.u-four-stars(href='#') 4
+              li.u-star-li-23
+                a.u-five-stars(href='#') 5
+      tr
+        td.entryDetailsTd2(colspan='2')
+          = 'Просмотров: '
+          = itemInfo.views
+          if itemInfo.loads
+            = ' | Загрузок: '
+            = itemInfo.loads
+          = ' | Комментарии: '
+          = itemInfo.comments.length
+          = ' | Рейтинг: '
+          = (Math.round(itemInfo.rating.score * 100) / 100).toFixed(1)
+          | /
+          = itemInfo.rating.votes
+          = ' | '

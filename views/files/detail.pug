@@ -13,10 +13,9 @@ block content
         td(width='80%' style='padding: 2px 2px 0px 2px;')
           | &nbsp;
           a(href='/') Главная страница
-          = ' » Видео » '
-          a(href=`/video/${category.slug}`)= category.title
+          = ' » Файловый архив » '
+          a(href=`/files/${category.slug}`)= category.title
         td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
   hr
-  +detail_body(video, { url: `/video/${category.slug}`, title: category.title })
-  br
-  +comments_block(video.comments)
+  +detail_body(file, { url: `/files/${category.slug}`, title: category.title })
+  +comments_block(file.comments)

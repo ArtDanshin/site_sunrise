@@ -47,26 +47,26 @@ exports.category = function(req, res) {
 };
 
 exports.detail = function(req, res) {
-  // const filesInfo = getFilesInfo();
-  // const video = filesInfo.files.find(video => video.slug === req.params.videoSlug);
-  //
-  // if (video) {
-  //   if (video.mainBody) {
-  //     const category = filesInfo.categories.find(cat => cat.slug === video.category[0]);
-  //
-  //     res.render('video/detail', {
-  //       pageTitle: video.title,
-  //       video,
-  //       category
-  //     });
-  //   } else {
-  //     res.render('under_construction', {
-  //       pageTitle: video.title
-  //     });
-  //   }
-  // } else {
-  //   res.status(404).end()
-  // }
+  const filesInfo = getFilesInfo();
+  const file = filesInfo.files.find(file => file.slug === req.params.fileSlug);
+
+  if (file) {
+    if (file.mainBody) {
+      const category = filesInfo.categories.find(cat => cat.slug === file.category[0]);
+
+      res.render('files/detail', {
+        pageTitle: file.title,
+        file,
+        category
+      });
+    } else {
+      res.render('under_construction', {
+        pageTitle: file.title
+      });
+    }
+  } else {
+    res.status(404).end()
+  }
 };
 
 function getFilesInfo() {
