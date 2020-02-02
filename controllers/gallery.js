@@ -17,7 +17,7 @@ exports.category = function(req, res) {
         const numberOfFirstImageOnPage = (pageNumber - 1) ? IMAGES_PER_PAGE * (pageNumber - 1): 0;
 
         if (images[numberOfFirstImageOnPage]) {
-          const urlToCategory = `/gallery/${req.params.category}/`;
+          const urlToCategory = `/gallery/${req.params.category}/1`;
 
           res.render('gallery/category', {
             pageTitle: category.title,

@@ -1,6 +1,6 @@
 include ../mixins/formatter
 
-mixin category_item(itemInfo, url)
+mixin category_item(itemInfo, url, category)
   table.entryTable(border='0' width='100%' cellspacing='0' cellpadding='2')
     tr
       td.entryTitleTd(width='90%')
@@ -13,12 +13,20 @@ mixin category_item(itemInfo, url)
         != itemInfo.previewBody
     tr
       td.entryDetailsTd(colspan='2')
+        a.e-category(href=category.url)= category.title
+        = ' | '
         = 'Просмотров: '
         span.entryReads= itemInfo.views
+
+        if itemInfo.loads
+          = ` | Загрузок: ${itemInfo.loads}`
+
         = ` | Добавил: ${itemInfo.author}`
-        = ' | Рейтинг: '
-        span.entryRating= (Math.round(itemInfo.rating * 100) / 100).toFixed(1)
+        = ' | Дата: '
+        +dateFormatter(itemInfo.publishDate)
         = ' | '
         a.entryCommentLink(href=url)= `Коментарии (${itemInfo.comments.length})`
-        = ' | Добавлено: '
-        +dateFormatter(itemInfo.publishDate, 'dateTime')
+
+        div(style='float:right')
+          ul#uStarRating85.uStarRating85.u-star-rating-12(title=`Рейтинг: ${(Math.round(itemInfo.rating.score * 100) / 100).toFixed(1)}/${itemInfo.rating.votes}`)
+            li#uCurStarRating85.u-current-rating.uCurStarRating85(style=`width:${itemInfo.rating.score * 20}%`)

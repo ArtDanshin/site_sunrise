@@ -50,7 +50,10 @@
       ],
       "views": 48,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629260000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_1\"><img src=\"/images/video/Previu1.jpg\" border=\"1\"></a></center>",
@@ -64,7 +67,10 @@
       ],
       "views": 27,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629560000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_2\"><img src=\"/images/video/Previu2.jpg\" border=\"1\"></a></center>",
@@ -78,7 +84,10 @@
       ],
       "views": 21,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629620000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_3\"><img src=\"/images/video/Previu3.jpg\" border=\"1\"></a></center>",
@@ -92,7 +101,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629740000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_4\"><img src=\"/images/video/Previu4.jpg\" border=\"1\"></a></center>",
@@ -106,7 +118,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629860000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_5\"><img src=\"/images/video/Previu5.jpg\" border=\"1\"></a></center>",
@@ -120,7 +135,10 @@
       ],
       "views": 48,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629260000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_6\"><img src=\"/images/video/Previu6.jpg\" border=\"1\"></a></center>",
@@ -134,7 +152,10 @@
       ],
       "views": 27,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629560000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_7\"><img src=\"/images/video/Previu7.jpg\" border=\"1\"></a></center>",
@@ -148,7 +169,10 @@
       ],
       "views": 21,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629620000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_8\"><img src=\"/images/video/Previu8.jpg\" border=\"1\"></a></center>",
@@ -162,7 +186,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629740000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_9\"><img src=\"/images/video/Previu9.jpg\" border=\"1\"></a></center>",
@@ -176,7 +203,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629860000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_10\"><img src=\"/images/video/Previu10.jpg\" border=\"1\"></a></center>",
@@ -190,7 +220,10 @@
       ],
       "views": 48,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629260000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_11\"><img src=\"/images/video/Previu11.jpg\" border=\"1\"></a></center>",
@@ -204,7 +237,10 @@
       ],
       "views": 27,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629560000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_12\"><img src=\"/images/video/Previu12.jpg\" border=\"1\"></a></center>",
@@ -218,7 +254,10 @@
       ],
       "views": 21,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629620000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_13\"><img src=\"/images/video/Previu13.jpg\" border=\"1\"></a></center>",
@@ -232,7 +271,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629740000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_14\"><img src=\"/images/video/Previu14.jpg\" border=\"1\"></a></center>",
@@ -246,7 +288,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629860000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_15\"><img src=\"/images/video/Previu15.jpg\" border=\"1\"></a></center>",
@@ -260,7 +305,10 @@
       ],
       "views": 48,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629260000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_16\"><img src=\"/images/video/Previu16.jpg\" border=\"1\"></a></center>",
@@ -274,7 +322,10 @@
       ],
       "views": 27,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629560000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_17\"><img src=\"/images/video/Previu17.jpg\" border=\"1\"></a></center>",
@@ -288,7 +339,10 @@
       ],
       "views": 21,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629620000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_18\"><img src=\"/images/video/Previu18.jpg\" border=\"1\"></a></center>",
@@ -302,7 +356,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629740000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_19\"><img src=\"/images/video/Previu19.jpg\" border=\"1\"></a></center>",
@@ -316,7 +373,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629860000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_20\"><img src=\"/images/video/Previu20.jpg\" border=\"1\"></a></center>",
@@ -330,7 +390,10 @@
       ],
       "views": 48,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629260000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_21\"><img src=\"/images/video/Previu21.jpg\" border=\"1\"></a></center>",
@@ -344,7 +407,10 @@
       ],
       "views": 27,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629560000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_22\"><img src=\"/images/video/Previu22.jpg\" border=\"1\"></a></center>",
@@ -358,7 +424,10 @@
       ],
       "views": 21,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629620000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_23\"><img src=\"/images/video/Previu23.jpg\" border=\"1\"></a></center>",
@@ -372,7 +441,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629740000,
       "previewBody": "<center><a href=\"/video/detail/sns_season1_24\"><img src=\"/images/video/Previu24.jpg\" border=\"1\"></a></center>",
@@ -386,7 +458,10 @@
       ],
       "views": 32,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629260000,
       "previewBody": "<center><a href=\"/video/detail/sns_special_1\"><img src=\"/images/video/PreviuSnST.jpg\" border=\"1\"></a></center>",
@@ -400,7 +475,10 @@
       ],
       "views": 27,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629560000,
       "previewBody": "<center><a href=\"/video/detail/sns_special_2\"><img src=\"/images/video/PreviuSnSTR.jpg\" border=\"1\"></a></center>",
@@ -414,7 +492,10 @@
       ],
       "views": 26,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629620000,
       "previewBody": "<center><a href=\"/video/detail/sns_special_3\"><img src=\"/images/video/PreviuInHT.jpg\" border=\"1\"></a></center>",
@@ -428,7 +509,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629740000,
       "previewBody": "<center><a href=\"/video/detail/sns_special_4\"><img src=\"/images/video/PreviuSnSTTM.jpg\" border=\"1\"></a></center>",
@@ -442,7 +526,10 @@
       ],
       "views": 22,
       "author": "SilverDragoon",
-      "rating": 0,
+      "rating": {
+        "score": 0,
+        "votes": 0
+      },
       "comments": [],
       "publishDate": 1199629860000,
       "previewBody": "<center><a href=\"/video/detail/sns_special_5\"><img src=\"/images/video/PreviuSnSTB.jpg\" border=\"1\"></a></center>",
