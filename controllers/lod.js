@@ -10,10 +10,6 @@ exports.worldmap = function(req, res) {
   res.render('lod/map', { pageTitle: 'Карта мира Endiness' });
 };
 
-exports.music = function(req, res) {
-  res.render('lod/music', { pageTitle: '' });
-};
-
 exports.faq = function(req, res) {
   res.render('under_construction', {
     pageTitle: 'The Legend of Dragoon - FAQ по прохождению'

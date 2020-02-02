@@ -1,5 +1,7 @@
 extends ../layouts/application
 
+include ../shared/comments
+
 block title
   = pageTitle
 
@@ -55,43 +57,4 @@ block content
                     td
                       a#rightSwch.rightSwitcher(href="#" rel="nofollow")
         hr
-        table(border='0' cellpadding='0' cellspacing='0' width='100%')
-          tr
-            td(width='60%' height='25')
-              = 'Всего комментариев: '
-              b= image.comments.length
-          tr
-            td(colspan='2' height='10')
-
-        //- Блок комментариев
-        if image.comments.length
-          #allEntries
-            each comment, index in image.comments
-              table(border="0" cellpadding="0" cellspacing="0" width="100%" class="commBodyTable")
-                tr
-                  td.commNumTd(style="padding:3px;")
-                    .commName(style="text-align:left;")
-                      a(href="#")
-                        b= image.comments.length - index
-                      = ' '
-                      a(href="#")
-                        b= comment.userInfo.name
-                      | &nbsp;
-                      span(style="font-size:7pt;unicode-bidi:embed;")= (comment.date)
-                tr
-                  td.commAllTd
-                    .cMessage(style="text-align:left;clear:both;padding:2px 0;")
-                      a(href="#" title=comment.userInfo.name style="padding-right:4px;")
-                        span.user_avatar
-                          img(alt="" align="left" src=comment.userInfo.avatar.src width="30" height="30" border="0")
-                      = comment.message
-              br
-
-        .commReg(align='center')
-          | Добавлять комментарии могут только зарегистрированные пользователи.
-          br
-          = ' [ '
-          a(href='#') Регистрация
-          = ' | '
-          a(href='#') Вход
-          = ' ]'
+        +comments_block(image.comments)

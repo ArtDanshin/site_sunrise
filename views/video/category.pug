@@ -35,7 +35,7 @@ block content
   #allEntries
     each video, index in videos
       div(id=`#entryID11${index}`)
-        +category_item(video, `/videos/detail/${video.slug}`, { url: urlToCategory, title: pageTitle })
+        +category_item(video, `/video/detail/${video.slug}`, { url: urlToCategory, title: pageTitle })
         br
       hr.entryHr(align='right')
   hr
