@@ -1,4 +1,6 @@
 exports.renderCategory = function({ req, res, category, items, itemsPerPage, type }) {
+  const template = ['gallery'].includes(type) ? type : 'listings';
+
   if (category) {
     const pageNumber = req.params.page && parseInt(req.params.page);
 
@@ -12,7 +14,7 @@ exports.renderCategory = function({ req, res, category, items, itemsPerPage, typ
         if (filteredItems[numberOfFirstFileOnPage]) {
           const urlToCategory = `/${type}/${req.params.category}/`;
 
-          res.render('listings/category', {
+          res.render(`${template}/category`, {
             type,
             pageTitle: category.title,
             currentPage: pageNumber,
