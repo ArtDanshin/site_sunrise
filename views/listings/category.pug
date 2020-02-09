@@ -1,0 +1,38 @@
+extends ../layouts/application
+
+include ../shared/pagination_short
+include ../shared/category_item
+include ../shared/pagination_long
+
+block title
+  = pageTitle
+
+block content
+  table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 0px 2px;')
+    tr
+      td(width='60%' style='padding: 2px 2px 0px 2px;')
+        != '&nbsp;Всего материалов: '
+        b= totalItems
+        br
+        != '&nbsp;Показано материалов: '
+        b
+          span.numShown73
+            - var firstNumber = (currentPage - 1) * itemsPerPage + 1
+            = firstNumber
+            | -
+            = firstNumber + items.length - 1
+      td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
+        +paginationShort(currentPage, totalItems, itemsPerPage, urlToCategory)
+  hr
+  #allEntries
+    each item, index in items
+      div(id=`#entryID11${index}`)
+        +category_item(item, `/${type}/detail/${item.slug}`, { url: urlToCategory, title: pageTitle })
+        br
+      hr.entryHr(align='right')
+  hr
+  table(border='0' cellpadding='0' cellspacing='0' width='100%' style='padding: 0px 2px 5px 2px;')
+    tr
+      td(width='100%' style='padding: 2px 2px 7px 2px;')
+        center
+          +paginationLong(currentPage, totalItems, itemsPerPage, urlToCategory)

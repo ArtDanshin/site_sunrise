@@ -22,11 +22,12 @@ exports.watch = function(cb) {
     script: 'app.js',
     ext: 'js pug json',
     watch: [
-      "controllers/",
-      "db/",
-      "scraping/",
-      "utils/",
-      "views/"
+      'controllers/',
+      'db/',
+      'helpers/',
+      'scraping/',
+      'utils/',
+      'views/'
     ],
     done: cb
   });
