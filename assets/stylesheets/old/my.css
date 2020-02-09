@@ -3,9 +3,9 @@
 }
 
 /* General Style */
-a:link {text-decoration:underline; color:#444444;}
-a:visited {text-decoration:underline; color:#444444;}
-a:hover {text-decoration:underline; color:#444444;}
+a:link {text-decoration:underline; color:#734323;}
+a:visited {text-decoration:underline; color:#734323;}
+a:hover {text-decoration:underline; color:#734323;}
 a:active {text-decoration:underline; color:#444444;}
 
 td, body {font-family:Verdana,Arial,Helvetica; font-size:11px; text-decoration:none; color:#2e2e2e;}
@@ -68,6 +68,7 @@ a.catNameActive:active {text-decoration:underline; color:#444444;}
 /* Entries Style */
 .entryTable {}
 .entryTitle {font-family:Arial,Sans-Serif;font-size:14px;font-weight:bold;color:#444444;}
+.entryTitleLink {font-family:Arial,Sans-Serif;font-size:14px;font-weight:bold;color:#734323;text-decoration:underline}
 .entryBodyTd {text-align:justify;padding-bottom:5px;}
 .entryTextTd {text-align:justify;padding-bottom:5px;padding-top:5px;border-top:1px dashed #444444;font:8pt;}
 

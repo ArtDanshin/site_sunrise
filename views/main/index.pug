@@ -1,5 +1,7 @@
 extends ../layouts/application
 
+include ../shared/stars
+
 block title
   = pageTitle
 
@@ -11,14 +13,16 @@ block content
           td.entryTitleTd(style='width:90%')
             .entryTitle
               span.entryTitleLink!= newsItem.title
-          td(align='right' nowrap='nowrap' style='font:8px;')= newsItem.date
+          td(align='right' nowrap='nowrap')= newsItem.date
         tr
           td.entryBodyTd(colspan='2')!= newsItem.body
         tr
           td.entryDetailsTd(colspan='2')
             | Просмотров: #{newsItem.views} | Добавил:
             span.entryUserLink= newsItem.author
-            |  | Rating: #{newsItem.rating} |
+            = ' | '
             span.entryCommentLink &#32;Коментарии (#{newsItem.comments})
+            div(style='float:right')
+              +stars_rating(newsItem.rating.score, newsItem.rating.votes)
             hr.entryHr
       br
