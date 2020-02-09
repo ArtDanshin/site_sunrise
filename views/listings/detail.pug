@@ -13,10 +13,10 @@ block content
         td(width='80%' style='padding: 2px 2px 0px 2px;')
           | &nbsp;
           a(href='/') Главная страница
-          = ' » Видео » '
-          a(href=`/video/${category.slug}`)= category.title
+          = ' » '
+          a(href=`/${type}/${category.slug}`)= category.title
         td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
   hr
-  +detail_body(video, { url: `/video/${category.slug}`, title: category.title })
+  +detail_body(item, { url: `/${type}/${category.slug}`, title: category.title })
   br
-  +comments_block(video.comments)
+  +comments_block(item.comments)
