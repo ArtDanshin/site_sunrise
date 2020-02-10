@@ -1,15 +1,4 @@
-﻿BODY {
- SCROLLBAR-HIGHLIGHT-COLOR: #1D3D54; SCROLLBAR-SHADOW-COLOR: #1D3D54; SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #e6e6e6; BACKGROUND-COLOR: #e6e6e6
-}
-
-/* General Style */
-a:link {text-decoration:underline; color:#734323;}
-a:visited {text-decoration:underline; color:#734323;}
-a:hover {text-decoration:underline; color:#734323;}
-a:active {text-decoration:underline; color:#444444;}
-
-td, body {font-family:Verdana,Arial,Helvetica; font-size:11px; text-decoration:none; color:#2e2e2e;}
-form {padding:0px;margin:0px;}
+﻿/* General Style */
 input,textarea,select {vertical-align:middle; font-size:8pt; font-family:Verdana,Arial,Helvetica;}
 .copy {font-size:10px;}
 h1{font-family:Arial,Sans-Serif;color:#444444;font-size:14px;margin:0px 0px 0px 0px}

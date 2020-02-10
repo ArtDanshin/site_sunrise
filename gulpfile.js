@@ -8,7 +8,7 @@ function css() {
 }
 
 function styl() {
-  return src('assets/stylesheets/*.styl')
+  return src('assets/stylesheets/application.styl')
     .pipe(stylus())
     .pipe(dest('public/assets/stylesheets'))
 }
@@ -33,5 +33,5 @@ exports.watch = function(cb) {
   });
 
   watch('assets/stylesheets/old/*.css', css);
-  watch('assets/stylesheets/*.styl', styl);
+  watch('assets/stylesheets/**/*.styl', styl);
 };

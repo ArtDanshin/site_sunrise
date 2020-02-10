@@ -8,6 +8,7 @@ html(lang="ru-Ru")
     meta(name='keywords' content='игра psone psx playstation legend of dragoon legendofdragoon мультимедиа games обзор Shakugan no Shana shakugannoshana RUS аниме RPG jRPG сериал обои кадры заставки OVA AMV Itadaki no Hecatetan Shanatan movie полнометражка полнометражный от заката до рассвета закат рассвет фотография фотографии silver dragoon')
     //meta(name='copyright' content="(c) Silver-Dragoon.UcoZ.Ru")
     meta(name='revisit-after' content='1 days')
+    link(rel='stylesheet', href='/assets/stylesheets/application.css')
     link(rel='stylesheet', href='/assets/stylesheets/my.css')
     link(rel='stylesheet', href='/assets/stylesheets/style.css')
     link(rel='stylesheet', href='/assets/stylesheets/entriesList.css')
@@ -24,49 +25,36 @@ html(lang="ru-Ru")
 
 
   body(bgcolor='#cccccc')
-    div(align='center')
-      center
-        // Header
-        table(cellspacing='0' cellpadding='0' width='100%' border='0')
-          tbody
+    table.layout__header(cellspacing='0' cellpadding='0' width='100%' border='0')
+      tbody
+        tr
+          td
+            img(src='/images/banner-left.jpg' width=478)
+          td(width='100%' bgcolor='#000000')
+          td
+            img(src='/images/banner-right.jpg' width=550)
+
+    table(cellspacing='0' cellpadding='0' width='100%' border='0')
+      tr
+        td(valign='top' width='200')
+          include ../shared/sidebar_blocks/menu_main
+          include ../shared/sidebar_blocks/menu_shana
+          include ../shared/sidebar_blocks/menu_lod
+          include ../shared/sidebar_blocks/clock
+          include ../shared/sidebar_blocks/personal
+        td(valign='top' width='100%' style='padding:0px 10px 0px 10px;')
+          table.site-block(cellspacing='0' cellpadding='0' width='100%' border='0')
             tr
-              td(valign='top' align='left' width=478 background='/images/banner-left.jpg')
-                img(src='/images/banner-left.jpg' width=478)
-              td(valign='top' align='center' width='100%' bgcolor='#000000')
-              td(valign='top' align='right' width=550 background='/images/banner-right.jpg')
-                img(src='/images/banner-right.jpg' width=550)
+              td.site-block__title._wide(align='center')
+                b
+                  block title
+            tr
+              td.site-block__body._wide
 
-        table(cellspacing='0' cellpadding='0' width='100%' border='0')
-          tr
-            td(valign='top' width='200')
-              br
-              include ../shared/sidebar_blocks/menu_main
-              br
-              include ../shared/sidebar_blocks/menu_shana
-              br
-              include ../shared/sidebar_blocks/menu_lod
-              br
-              include ../shared/sidebar_blocks/clock
-              br
-              include ../shared/sidebar_blocks/personal
-            td(valign='top' width='100%' style='padding:0px 10px 0px 10px;')
-              br
-              table(cellspacing='0' cellpadding='0' width='100%' border='0')
-                tr
-                  td(align='center' style="background: url('/images/4.gif') #FFF;border:1px double #FFF; height: 24px; color: #FFF;")
-                    b
-                      block title
-                tr
-                  td(style="background: url('/images/5.gif') #FFF;border:3px double #FFF;")
+                block content
 
-                    block content
-
-            td(valign='top' width='200')
-              br
-              include ../shared/sidebar_blocks/poll
-              br
-              include ../shared/sidebar_blocks/admin-info
-              br
-              include ../shared/sidebar_blocks/counters
-              br
-              include ../shared/sidebar_blocks/online
+        td(valign='top' width='200')
+          include ../shared/sidebar_blocks/poll
+          include ../shared/sidebar_blocks/admin-info
+          include ../shared/sidebar_blocks/counters
+          include ../shared/sidebar_blocks/online

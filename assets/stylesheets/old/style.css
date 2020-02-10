@@ -1,13 +1,4 @@
-﻿BODY {
-	MARGIN: 10px 10px; SCROLLBAR-HIGHLIGHT-COLOR: #1D3D54; SCROLLBAR-SHADOW-COLOR: #1D3D54; SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-TRACK-COLOR: #e6e6e6; BACKGROUND-COLOR: #000000
-}
-TD {
-	FONT-SIZE: 11px; COLOR: #444444; FONT-FAMILY: tahoma, sans-serif
-}
-DIV {
-	FONT-SIZE: 11px; FONT-FAMILY: tahoma, sans-serif; text-align: justify
-}
-P {
+﻿P {
 	FONT-SIZE: 11px; FONT-FAMILY: tahoma, sans-serif; text-align: justify
 }
 INPUT {
@@ -16,27 +7,14 @@ INPUT {
 TEXTAREA {
 	FONT-SIZE: 11px; FONT-FAMILY: tahoma, sans-serif
 }
-FORM {
-	FONT-SIZE: 11px; FONT-FAMILY: tahoma, sans-serif
-}
+
 SELECT {
 	FONT-SIZE: 11px; FONT-FAMILY: tahoma, sans-serif
 }
 UL {
 	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
 }
-A:link {
-	FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #444444; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none
-}
-A:active {
-	FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #444444; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none
-}
-A:visited {
-	FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #444444; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none
-}
-A:hover {
-	FONT-SIZE: 11px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #cc6600; FONT-FAMILY: tahoma, sans-serif; TEXT-DECORATION: none
-}
+
 IMG {
 	BORDER-color: black
 }
