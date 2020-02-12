@@ -50,23 +50,4 @@
 
 .totalVotesTable {border-bottom:1px solid #E2E6EA; border-left:1px solid #E2E6EA; border-right:1px solid #E2E6EA;}
 .totalVotesTd {background:#FFFFFF}
-/* ---------- */
-
-/* ====== Stars in entries styles ====== */
-.u-star-rating-12 { list-style:none;margin:0px;padding:0px;width:60px;height:12px;position:relative;background: url('/images/stars.png') top left repeat-x }
-.u-star-rating-12 li{ padding:0px;margin:0px;float:left }
-.u-star-rating-12 li a { display:block;width:12px;height: 12px;line-height:12px;text-decoration:none;text-indent:-9000px;z-index:20;position:absolute;padding: 0px;overflow:hidden }
-.u-star-rating-12 li a:hover { background: url('/images/stars.png') left center;z-index:2;left:0px;border:none }
-.u-star-rating-12 a.u-one-star { left:0px }
-.u-star-rating-12 a.u-one-star:hover { width:12px }
-.u-star-rating-12 a.u-two-stars { left:12px }
-.u-star-rating-12 a.u-two-stars:hover { width:24px }
-.u-star-rating-12 a.u-three-stars { left:24px }
-.u-star-rating-12 a.u-three-stars:hover { width:36px }
-.u-star-rating-12 a.u-four-stars { left:36px }
-.u-star-rating-12 a.u-four-stars:hover { width:48px }
-.u-star-rating-12 a.u-five-stars { left:48px }
-.u-star-rating-12 a.u-five-stars:hover { width:60px }
-.u-star-rating-12 li.u-current-rating { top:0 !important; left:0 !important;margin:0 !important;padding:0 !important;outline:none;background: url('/images/stars.png') left bottom;position: absolute;height:12px !important;line-height:12px !important;display:block;text-indent:-9000px;z-index:1 }
-
-/* ====== End in entries styles ====== */
+/* ---------- *

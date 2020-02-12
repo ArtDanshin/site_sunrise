@@ -41,18 +41,18 @@ block content
           = ' | Добавил: '
           = item.author
           div(style='float:right')
-            ul#uStarRating23.uStarRating23.u-star-rating-12(title=`Рейтинг: ${(Math.round(item.rating.score * 100) / 100).toFixed(1)}/${item.rating.votes}`)
-              li#uCurStarRating23.u-current-rating.uCurStarRating23(style=`width:${item.rating.score * 20}%`)
-              li.u-star-li-23
-                a.u-one-star(href='#') 1
-              li.u-star-li-23
-                a.u-two-stars(href='#') 2
-              li.u-star-li-23
-                a.u-three-stars(href='#') 3
-              li.u-star-li-23
-                a.u-four-stars(href='#') 4
-              li.u-star-li-23
-                a.u-five-stars(href='#') 5
+            ul.stars(title=`Рейтинг: ${(Math.round(item.rating.score * 100) / 100).toFixed(1)}/${item.rating.votes}`)
+              li.stars__current(style=`width:${item.rating.score * 20}%`)
+              li.stars__item
+                a.stars__link._one(href='#') 1
+              li.stars__item
+                a.stars__link._twos(href='#') 2
+              li.stars__item
+                a.stars__link._threes(href='#') 3
+              li.stars__item
+                a.stars__link._fours(href='#') 4
+              li.stars__item
+                a.stars__link._fives(href='#') 5
       tr
         td.entryDetailsTd2(colspan='2')
           = 'Просмотров: '
