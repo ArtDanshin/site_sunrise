@@ -1,0 +1,64 @@
+.stars
+  position relative
+  width 60px
+  height 12px
+  margin 0
+  padding 0
+  background url('/images/stars.png') top left repeat-x
+  list-style none
+
+  &__current
+    z-index 1
+    display block
+    position absolute
+    top 0 !important
+    left 0 !important
+    margin 0 !important
+    padding 0 !important
+    height 12px !important
+    background url('/images/stars.png') left bottom
+    outline none
+    line-height 12px !important
+    text-indent -9000px
+
+  &__item
+    float left
+    padding 0px
+    margin 0px
+
+  &__link
+    z-index 20
+    display block
+    position absolute
+    width 12px
+    height 12px
+    padding 0px
+    line-height 12px
+    text-decoration none
+    text-indent -9000px
+    overflow hidden
+    &:hover
+      z-index 2
+      left 0 !important
+      border none
+      background url('/images/stars.png') left center
+    &._one
+      left 0
+      &:hover
+        width 12px
+    &._twos
+      left 12px
+      &:hover
+        width 24px
+    &._threes
+      left 24px
+      &:hover
+        width 36px
+    &._fours
+      left 36px
+      &:hover
+        width 48px
+    &._fives
+      left 48px
+      &:hover
+        width 60px
