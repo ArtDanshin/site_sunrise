@@ -1,0 +1,27 @@
+include ../mixins/formatter
+
+mixin comments_list(comments)
+  if comments.length
+    .comm
+      each comment, index in comments
+        table.comm__item(border=0 width='100%' cellspacing=0 cellpadding=5)
+          tr
+            td.comm__num-td(width='4%')= `${comments.length - index}.`
+            td.comm__name-td
+              span.comm__name= comment.userInfo.name
+              if comment.userInfo.login
+                | (
+                span.comm__user= comment.userInfo.login
+                | )
+              if comment.userInfo.email
+                | &#32;
+                a(href='javascript://' onclick=comment.userInfo.email)
+                  img(border=0 src='/images/email.gif' align='absmiddle' title='E-mail')
+            td.comm__date-td(width='20%' align='right' nowrap)
+              +dateFormatter(comment.date, 'dateTime')
+          tr
+            td.comm__body(width='100%' colspan=3)
+              if comment.userInfo.avatar
+                a.comm__avatar(href='#' title=comment.userInfo.name)
+                  img(alt src=comment.userInfo.avatar.src width='30' height='30' border='0')
+              != comment.body

@@ -1,44 +1,62 @@
 [
   {
-    "authorName": "Храомника",
-    "authorLogin": null,
-    "email": "window.top.location.href='mai'+'lto:'+'sky'+'reave'+'r@mail.ru';return false;",
-    "date": "01.04.2008, 05:47",
-    "body": "Большое спасибо вам Артём я искал образ Легнды о Драгунах очень долго Но нашол только на вашем сайте , Запустил все работает на прошивке 3.90 m33 раздел с обоими и в правду обьемен аналогов ему я не видел Хотя люблю эту игру оч давно Эт моя первая РПГ на сони была с неё я полюбил этот жанер Спасибо вам , продолжайте в том же духе <img src=\"/images/smiles/bag.gif\" border=\"0\" align=\"absmiddle\" alt=\"bag\">"
+    "body": "Большое спасибо вам Артём я искал образ Легнды о Драгунах очень долго Но нашол только на вашем сайте , Запустил все работает на прошивке 3.90 m33 раздел с обоими и в правду обьемен аналогов ему я не видел Хотя люблю эту игру оч давно Эт моя первая РПГ на сони была с неё я полюбил этот жанер Спасибо вам , продолжайте в том же духе <img src=\"/images/smiles/bag.gif\" border=\"0\" align=\"absmiddle\" alt=\"bag\">",
+    "date": 1207014420000,
+    "userInfo": {
+      "name": "Храомника",
+      "login": null,
+      "email": "window.top.location.href='mai'+'lto:'+'sky'+'reave'+'r@mail.ru';return false;",
+      "avatar": null
+    }
   },
   {
-    "authorName": "ILNUR",
-    "authorLogin": null,
-    "email": null,
-    "date": "21.02.2008, 16:47",
-    "body": "Просмотрел ваш сайт, в общем неплохо <img src=\"/images/smiles/smile.gif\" border=\"0\" align=\"absmiddle\" alt=\"smile\">"
+    "body": "Просмотрел ваш сайт, в общем неплохо <img src=\"/images/smiles/smile.gif\" border=\"0\" align=\"absmiddle\" alt=\"smile\">",
+    "date": 1203601620000,
+    "userInfo": {
+      "name": "ILNUR",
+      "login": null,
+      "email": null,
+      "avatar": null
+    }
   },
   {
-    "authorName": "Анатолий",
-    "authorLogin": "Apollon777",
-    "email": "window.top.location.href='mai'+'lto:'+'apo'+'llon_'+'83@mail.ru';return false;",
-    "date": "14.02.2008, 22:26",
-    "body": "Лана будем ждать хор инфы!!!!! <img src=\"/images/smiles/biggrin.gif\" border=\"0\" align=\"absmiddle\" alt=\"biggrin\">"
+    "body": "Лана будем ждать хор инфы!!!!! <img src=\"/images/smiles/biggrin.gif\" border=\"0\" align=\"absmiddle\" alt=\"biggrin\">",
+    "date": 1203017160000,
+    "userInfo": {
+      "name": "Анатолий",
+      "login": "Apollon777",
+      "email": "window.top.location.href='mai'+'lto:'+'apo'+'llon_'+'83@mail.ru';return false;",
+      "avatar": null
+    }
   },
   {
-    "authorName": "na_1c",
-    "authorLogin": null,
-    "email": null,
-    "date": "17.06.2007, 09:51",
-    "body": "Сайт прикольный"
+    "body": "Сайт прикольный",
+    "date": 1182059460000,
+    "userInfo": {
+      "name": "na_1c",
+      "login": null,
+      "email": null,
+      "avatar": null
+    }
   },
   {
-    "authorName": "Айвен",
-    "authorLogin": null,
-    "email": null,
-    "date": "11.04.2007, 03:49",
-    "body": "<b>Красиво, с кортинками понятно, Java - присутствует-гут тока не стоит перегружать-я про летающий рейтинг... А в целом ГУТ!))</b>"
+    "body": "<b>Красиво, с кортинками понятно, Java - присутствует-гут тока не стоит перегружать-я про летающий рейтинг... А в целом ГУТ!))</b>",
+    "date": 1176248940000,
+    "userInfo": {
+      "name": "Айвен",
+      "login": null,
+      "email": null,
+      "avatar": null
+    }
   },
   {
-    "authorName": "Kat",
-    "authorLogin": null,
-    "email": "window.top.location.href='mai'+'lto:'+'nig'+'hting'+'ale91@gmail.com';return false;",
-    "date": "06.04.2007, 18:18",
-    "body": "Prekrasno, PREKRASNO! <img src=\"/images/smiles/smile.gif\" border=\"0\" align=\"absmiddle\" alt=\"smile\"> "
+    "body": "Prekrasno, PREKRASNO! <img src=\"/images/smiles/smile.gif\" border=\"0\" align=\"absmiddle\" alt=\"smile\"> ",
+    "date": 1175869080000,
+    "userInfo": {
+      "name": "Kat",
+      "login": null,
+      "email": "window.top.location.href='mai'+'lto:'+'nig'+'hting'+'ale91@gmail.com';return false;",
+      "avatar": null
+    }
   }
 ]
