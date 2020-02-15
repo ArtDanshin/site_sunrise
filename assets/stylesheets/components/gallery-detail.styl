@@ -1,0 +1,132 @@
+.gallery-detail
+  &__photo
+    margin-bottom 10px
+    text-align center
+  &__title
+    margin 10px 0
+  &__desc
+    margin 15px 0
+    text-align justify
+
+  // Дубль gallery-list__photo-block
+  &__photo-block
+    position relative
+    display inline-block
+    padding 5px
+    font 12px/16px Arial
+    background url('/images/opacity02.png')
+    box-shadow 0 .5px 3px rgba(0, 0, 0, .37)
+    border-radius 5px
+    &:after
+      content ""
+      display block
+      position absolute
+      top 100%
+      left 0
+      right 0
+      height 7px
+      background url('/images/ph-shadow.png') no-repeat center top
+
+  // Дубль gallery-list__top
+  &__top
+    position relative
+    overflow hidden
+
+  &__img
+    max-width 100%
+    height auto
+
+  &__tip
+    display block
+    position absolute
+    bottom -49px
+    left 0
+    width 100%
+    height 48px
+    background url('/images/opacity085.png')
+    font 12px/48px Arial !important
+    text-align center
+    text-decoration none !important
+    color #595959 !important
+    text-shadow 0 1px 0 #fff !important
+    transition bottom .2s .1s ease
+  &__top:hover > &__tip
+    bottom 0
+
+  &__expand-ico
+    display inline-block
+    width 24px
+    height 48px
+    margin 0 10px 0 0
+    background url('/images/expand.png') no-repeat left center
+    vertical-align middle
+
+  &__details
+    margin-top 5px
+    line-height 35px
+    text-align center
+
+  // Дубли из gallery-list__***
+  &__views
+  &__comments
+  &__rating
+    display inline-block
+    padding-left 20px
+    margin 0 10px 0 0
+    background no-repeat left center
+  &__views
+    background-image url('/images/uico-view.png')
+  &__comments
+    padding-left 18px
+    background-image url('/images/uico-comment.png')
+  &__rating
+    margin 0
+    padding-left 18px
+    background-image url('/images/uico-rating.png')
+
+  &__slider
+    margin 10px 0
+    text-align center
+
+  &__table
+    margin 0 auto
+
+  &__left-swch
+  &__right-swch
+    display block
+    width 22px
+    height 46px
+    background transparent url('/images/photo-arrows.png') no-repeat
+    &:hover
+      opacity: .8
+  &__right-swch
+    background transparent url('/images/photo-arrows.png') no-repeat -22px 0
+
+  &__photos
+    position relative
+    overflow hidden
+
+  &__other-block
+    display inline-block
+    position relative
+    width 200px
+    margin 0 4px
+    &._beside img
+      opacity 0.5
+      transition opacity .2s .1s ease
+    &._beside:hover img
+      opacity 1
+
+  &__other-wrap
+    display table-cell
+    width auto
+    height 150px
+    vertical-align middle
+    overflow hidden
+
+  &__other-img
+    width 100%
+    vertical-align middle
+
+
+

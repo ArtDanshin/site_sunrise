@@ -9,52 +9,40 @@ block content
   table(border='0' cellpadding='0' cellspacing='0' width='100%')
     tr
       td(colspan='3' style='padding:3px;' valign='top')
-        #u-photo
-          .uphoto-entry
-            h2.photo-etitle= image.title
-            .photo-edescr= image.description
-            .u-center
-              .photo-block
-                .ph-wrap
-                  span.photo-expand
-                    center
-                      span#phtmDiv35
-                        span#phtmSpan35(style='position:relative')
-                          img#p339879414(border='0' src=`/images/gallery/${image.originImageInfo.filename}` width=image.originImageInfo.width height=image.originImageInfo.height)
+        .gallery-detail__photo
+          h2.gallery-detail__title= image.title
+          .gallery-detail__desc= image.description
+          .gallery-detail__photo-block
+            .gallery-detail__top
+              img.gallery-detail__img(border='0' src=`/images/gallery/${image.originImageInfo.filename}` width=image.originImageInfo.width height=image.originImageInfo.height)
 
-                      a.dd-tip.ulightbox(href=`/images/gallery/${image.originImageInfo.filename}` target='_blank')
-                        i.expand-ico
-                        | В реальном размере
-                        b= ` ${image.originImageInfo.width}x${image.originImageInfo.height}`
-                        = ` / ${image.originImageInfo.size / 1000}Kb`
-                .photo-edetails.ph-js-details
-                  span.phd-views= image.views
-                  span.phd-comments= image.comments.length
-                  span.phd-rating
-                    span#entRating9= (Math.round(image.rating * 100) / 100).toFixed(1)
-          .photo-slider.u-center
-            #phtOtherThumbs.phtThumbs
-              table(border="0" cellpadding="0" cellspacing="0")
-                tbody
-                  tr
-                    td
-                      a#leftSwch.leftSwitcher(href='#' rel='nofollow')
-                    td(align='center' style="white-space: nowrap;")
-                      div#oldPhotos
-                        span.animate-wrap
-                          a.otherPhotoA(href=`/gallery/detail/${otherImages[0].slug}`)
-                            span.ph-wrap
-                              span.ph-tc
-                                img.otherPhoto(border="0" src=`/images/gallery/thumb/${otherImages[0].thumbImageInfo.filename}`)
-                          a.photoActiveA(href=`/gallery/detail/${otherImages[1].slug}`)
-                            span.ph-wrap
-                              span.ph-tc
-                                img.photoActive(border="0" src=`/images/gallery/thumb/${otherImages[1].thumbImageInfo.filename}`)
-                          a.otherPhotoA(href=`/gallery/detail/${otherImages[2].slug}`)
-                            span.ph-wrap
-                              span.ph-tc
-                                img.otherPhoto(border="0" src=`/images/gallery/thumb/${otherImages[2].thumbImageInfo.filename}`)
-                    td
-                      a#rightSwch.rightSwitcher(href="#" rel="nofollow")
+              a.gallery-detail__tip.ulightbox(href=`/images/gallery/${image.originImageInfo.filename}` target='_blank')
+                i.gallery-detail__expand-ico
+                | В реальном размере
+                b= ` ${image.originImageInfo.width}x${image.originImageInfo.height}`
+                = ` / ${image.originImageInfo.size / 1000}Kb`
+            .gallery-detail__details
+              span.gallery-detail__views= image.views
+              span.gallery-detail__comments= image.comments.length
+              span.gallery-detail__rating= (Math.round(image.rating * 100) / 100).toFixed(1)
+        .gallery-detail__slider
+          table.gallery-detail__table(border="0" cellpadding="0" cellspacing="0")
+            tbody
+              tr
+                td
+                  a.gallery-detail__left-swch(href='#' rel='nofollow')
+                td(align='center' style="white-space: nowrap;")
+                  .gallery-detail__photos
+                    a.gallery-detail__other-block._beside(href=`/gallery/detail/${otherImages[0].slug}`)
+                      .gallery-detail__other-wrap
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[0].thumbImageInfo.filename}`)
+                    a.gallery-detail__other-block(href=`/gallery/detail/${otherImages[1].slug}`)
+                      .gallery-detail__other-wrap
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[1].thumbImageInfo.filename}`)
+                    a.gallery-detail__other-block._beside(href=`/gallery/detail/${otherImages[2].slug}`)
+                      .gallery-detail__other-wrap
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[2].thumbImageInfo.filename}`)
+                td
+                  a.gallery-detail__right-swch(href="#" rel="nofollow")
         hr
         +comments_block(image.comments)
