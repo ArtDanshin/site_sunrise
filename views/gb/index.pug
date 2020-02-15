@@ -1,5 +1,8 @@
 extends ../layouts/application
 
+include ../comments/list
+include ../comments/form
+
 block title
   = pageTitle
 
@@ -17,142 +20,21 @@ block content
               a(href='#') Добавить запись
               | &#32;]
         hr
-        .csTop(style='padding-bottom:7px;')
-          #pagesBlock1(style='float:right;') Страницы: [
+        div(style='padding-bottom:7px;')
+          div(style='float:right;') Страницы: [
             b 1
             | ]
-          #numEntries Показано&#32;
-            b.csNum 1
+          div Показано&#32;
+            b 1
             | -
-            b.csNum= gbPosts.length
+            b= gbPosts.length
             | &#32;из&#32;
-            b.cNum= gbPosts.length
+            b= gbPosts.length
             | &#32;сообщений
-        #allEntries
-          each post, index in gbPosts
-            table.cBlock1(border=0 width='100%' cellspacing=0 cellpadding=0)
-              tr
-                td.commTopLeft
-                  img.topImg(border=0 src='/images/1px.gif' width=1 height=1)
-                td.commTopCenter(width='100%')
-                  img(border=0 src='/images/1px.gif' width=1 height=1)
-                td.commTopRight
-                  img.topImg(border=0 src='/images/1px.gif' width=1 height=1)
-              tr
-                td.commMiddleLeft
-                  img.middleImg(border=0 src='/images/1px.gif' width=1 height=1)
-                td.commMiddleCenter
-                  table.commBodyTable(border=0 width='100%' cellspacing=0 cellpadding=5)
-                    tr
-                      td.commNumTd(width='4%')= `${gbPosts.length - index}.`
-                      td.commNameTd
-                        span.commName= post.authorName
-                        if post.authorLogin
-                          | (
-                          span.commUser= post.authorLogin
-                          | )
-                        if post.email
-                          | &#32;
-                          a(href='javascript://' onclick=post.email)
-                            img(border=0 src='/images/email.gif' align='absmiddle' title='E-mail')
-                      td.commDateTd(width='20%' align='right' nowrap)= post.date
-                    tr
-                      td.commCommentTd(width='100%' colspan=3)!= post.body
-                td.commMiddleRight
-                  img.middleImg(border=0 src='/images/1px.gif' width=1 height=1)
-              tr
-                td.commBottomLeft
-                  img.bottomImg(border=0 src='/images/1px.gif' width=1 height=1)
-                td.commBottomCenter
-                  img(border=0 src='/images/1px.gif' width=1 height=1)
-                td.commBottomRight
-                  img.bottomImg(border=0 src='/images/1px.gif' width=1 height=1)
-        div#pagesBlock2(style='text-align: center')
+        +comments_list(gbPosts)
+        div(style='text-align: center')
           | [
           b 1-#{gbPosts.length}
           | ]
         br
-        form(method='post' name='addform' id='acform' style='margin:0px' action='#')
-          table.commTable(border=0 width='100%' cellspacing=1 cellpadding=2)
-            tr
-              td.commTd2(colspan=2)
-                .commError#eMessage(align='center')
-            tr
-              td.commTd1(width='15%' nowrap) Имя *:
-              td.commTd2
-                input.commFl#gbF7(type='text' name='name' value='' size=30 maxlength=60)
-            tr
-              td.commTd1 Email:
-              td.commTd2
-                input.commFl#gbF1(type='text' name='email' value='' size=30 maxlength=60)
-            tr
-              td.commTd1 WWW:
-              td.commTd2
-                input.commFl#gbF2(type='text' name='url' value='' size=30 maxlength=70)
-            tr
-              td.commTd1 ICQ:
-              td.commTd2
-                input.commFl#gbF3(type='text' name='icq' size=30 maxlength=20)
-            tr
-              td.commTd2(colspan=2)
-                div(style='padding-bottom:2px')
-                table(border=0 cellpadding=0 cellspacing=0 width="100%")
-                  tr
-                    td(valign='top')
-                      textarea.commFl#message(rows=10 cols=40 name='message')
-                    td(width='5%' valign='top' align='center' style='padding-left:3px;')
-                      script.
-                        function emoticon(code) {
-                          if (code != "") {
-                            var txtarea = document.addform.message;
-                            code = ' ' + code + ' ';
-                            if (document.selection) {
-                              txtarea.focus();
-                              var txtContent = txtarea.value;
-                              var str = document.selection.createRange();
-                              if (str.text == "") {
-                                str.text = code;
-                              } else if (txtContent.indexOf(str.text) != -1) {
-                                str.text = code + str.text;
-                              } else {
-                                txtarea.value = txtContent + code;
-                              }
-                            } else {
-                              txtarea.value = txtarea.value + code;
-                            }
-                          }
-                        }
-                      table.smiles(border=0 cellpadding=3 onmouseover="document.getElementById('asmltr').style.display='';" onmouseout="document.getElementById('asmltr').style.display='none';")
-                        tr
-                          each smile in [{name:'angry',code:'>('},{name:'biggrin',code:':D'},{name:'cool',code:'B)'}]
-                            td.sml1(align='center')
-                              a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                                img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
-                        tr
-                          each smile in [{name:'cry',code:':&bsol;'},{name:'dry',code:'&lt;_&lt;'},{name:'happy',code:'^_^'}]
-                            td.sml1(align='center')
-                              a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                                img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
-                        tr
-                          each smile in [{name:'sad',code:':('},{name:'smile',code:':)'},{name:'surprised',code:':o'}]
-                            td.sml1(align='center')
-                              a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                                img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
-                        tr
-                          each smile in [{name:'tongue',code:':p'},{name:'wacko',code:'%)'},{name:'wink',code:';)'}]
-                            td.sml1(align='center')
-                              a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                                img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
-                        tr#asmltr(style='display:none;')
-                          td#allSmiles(colspan=3 align='center' nowrap)
-                            a(href="javascript://" onclick="return false;")
-                              | Все смайлы
-            tr
-              td.commTd1 Код *:
-              td.commTd2
-                input.securityCode(type='text' style='text-align:center' name='code' size=5 maxlength=4)
-                | &#32;
-                img#secuImg(style='margin:0;padding:0;border:0;' align='absmiddle' src='/images/security-code.gif')
-            tr
-              td.commTd2(colspan=2 align='center')
-                input.commSbmFl#gbsbm(type='submit' value='- Добавить комментарий -')
+        +comments_form()

@@ -1,0 +1,14 @@
+include ./list
+include ./form
+
+mixin comments_block(comments)
+  table(border='0' cellpadding='0' cellspacing='0' width='100%')
+    tbody
+      tr
+        td(width='60%' height='25')
+          = 'Всего комментариев: '
+          b= comments.length
+        td(align='right' height='25')
+
+  +comments_list(comments)
+  +comments_form()

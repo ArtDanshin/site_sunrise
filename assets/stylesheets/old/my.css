@@ -15,23 +15,8 @@
 /* --------------- */
 
 /* Comments and Gb Style */
-.commAllTd {padding: 5px;}
-.commBodyTable {border:1px dotted #A9B8C2;}
-.commNumTd,.commNameTd,.commDateTd {border-bottom:1px dotted #A9B8C2;background:#F4F4F4;}
-.commDateTd {font-size:9px;color:#444444;}
-.commName {color:#444444;}
-
 .middleImg {width:4px;}
 /* -------------- */
-
-/* Comments Form Style */
-.commTable {}
-.commTd1 {color:#444444;}
-.commTd2 {}
-.commFl {width:100%;}
-.smiles {border:1px inset;background:#F7F7F7;}
-.commError {color:#444444;}
-/* ------------------- */
 
 /* Photo Style */
 .photo-edetails {text-align:center;}

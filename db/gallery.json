@@ -172,11 +172,12 @@
       "rating": 0,
       "comments": [
         {
-          "message": "Определенно",
+          "body": "Определенно",
           "date": 1542464760000,
           "rating": 0,
           "userInfo": {
-            "name": "SilverDragoon",
+            "name": "Артем",
+            "login": "SilverDragoon",
             "avatar": {
               "src": "/images/avatars/202571.jpg",
               "width": 30,
@@ -185,11 +186,12 @@
           }
         },
         {
-          "message": "Классная картинка",
+          "body": "Классная картинка",
           "date": 1542464760000,
           "rating": 0,
           "userInfo": {
-            "name": "SilverDragoon",
+            "name": "Артем",
+            "login": "SilverDragoon",
             "avatar": {
               "src": "/images/avatars/202571.jpg",
               "width": 30,
