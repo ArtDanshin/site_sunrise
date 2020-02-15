@@ -1,24 +1,4 @@
-﻿/* Entries Style */
-.entryTable {}
-.entryTitle {font-family:Arial,Sans-Serif;font-size:14px;font-weight:bold;color:#444444;}
-.entryTitleLink {font-family:Arial,Sans-Serif;font-size:14px;font-weight:bold;color:#734323;text-decoration:underline}
-.entryBodyTd {text-align:justify;padding-bottom:5px;}
-.entryTextTd {text-align:justify;padding-bottom:5px;padding-top:5px;border-top:1px dashed #444444;font:8pt;}
-
-.entryDetailsTd {border-top:1px dashed #444444;border-bottom:1px dashed #444444;font-family:Tahoma,Arial,Sans-Serif;color:#444444;padding-bottom:5px;padding-top:3px;  text-align:left;font-size:7pt;}
-.entryDetailsTd1 {border-top:1px dashed #444444;border-bottom:1px dashed #444444;font-family:Tahoma,Arial,Sans-Serif;color:#444444;padding-bottom:5px;padding-top:3px;  text-align:left;font-size:8pt;}
-.entryDetailsTd2 {border-bottom:1px dashed #444444;font-family:Tahoma,Arial,Sans-Serif;color:#444444;padding-bottom:5px;padding-top:3px;  text-align:left;font-size:8pt;}
-
-.entryDateTd {font-size:7pt;font-family:Tahoma,Arial,Sans-Serif;}
-
-.entryHr {color:#444444;height:1px;border-top:0px;display:none;}
-/* --------------- */
-
-/* Comments and Gb Style */
-.middleImg {width:4px;}
-/* -------------- */
-
-/* Photo Style */
+﻿/* Photo Style */
 .photo-edetails {text-align:center;}
 /* ----------- */
 

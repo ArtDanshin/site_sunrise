@@ -16,10 +16,10 @@ block content
           a(href=`/${type}/${category.slug}`)= category.title
         td(align='right' style='white-space: nowrap; padding: 2px 2px 0px 2px;')
   hr
-  .entryTitle(style='padding-bottom:3px;')
+  .category-item__title(style='padding-bottom:3px;')
     | &nbsp;&raquo;&nbsp;
-    h1(style='display:inline;')= item.title
-  table.entryTable(border='0' width='100%' cellspacing='0' cellpadding='2')
+    h1= item.title
+  table(border='0' width='100%' cellspacing='0' cellpadding='2')
     tbody
       tr
         td(width='85%')
@@ -28,19 +28,18 @@ block content
             if item.fileSize
               = ` Общий размер фаила составляет: ${item.fileSize}МБ`
             = ' ]'
-        td.entryDateTd(align='right' style='white-space: nowrap;')
+        td.category-item__date-td(align='right')
           +dateFormatter(item.publishDate, 'dateTime')
       tr
-        td.entryTextTd(colspan='2')
+        td.category-item__main-body(colspan='2')
           != item.mainBody
       tr
-        td.entryDetailsTd1(colspan='2')
+        td.category-item__details-td1(colspan='2')
           = 'Категория: '
-          a.entryCatLink.entryCatLink(href=`/${type}/${category.slug}`)
+          a.category-item__link(href=`/${type}/${category.slug}`)
             = category.title
-          = ' | Добавил: '
-          = item.author
-          div(style='float:right')
+          = ` | Добавил: ${item.author}`
+          .category-item__rating
             ul.stars(title=`Рейтинг: ${(Math.round(item.rating.score * 100) / 100).toFixed(1)}/${item.rating.votes}`)
               li.stars__current(style=`width:${item.rating.score * 20}%`)
               li.stars__item
@@ -54,18 +53,14 @@ block content
               li.stars__item
                 a.stars__link._fives(href='#') 5
       tr
-        td.entryDetailsTd2(colspan='2')
-          = 'Просмотров: '
-          = item.views
+        td.category-item__details-td2(colspan='2')
+          = `Просмотров: ${item.views}`
           if item.loads
-            = ' | Загрузок: '
-            = item.loads
-          = ' | Комментарии: '
-          = item.comments.length
+            = ` | Загрузок: ${item.loads}`
+          = ` | Комментарии: ${item.comments.length}`
           = ' | Рейтинг: '
           = (Math.round(item.rating.score * 100) / 100).toFixed(1)
           | /
           = item.rating.votes
-          = ' | '
   br
   +comments_block(item.comments)
