@@ -64,6 +64,8 @@
 .comAddOpened #mphoto-addcmt-btn{display:none; }
 #photoModalWrap .cMessage{word-break:break-word; overflow: hidden; }
 
+.photo-edetails {text-align:center;}
+
 /* Slider Other Photo */
 #phtOtherThumbs {margin-bottom: 10px;}
 #phtOtherThumbs td {font-size: 0;}
