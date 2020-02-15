@@ -4,44 +4,35 @@ block title
   = pageTitle
 
 block content
-  table(border='0' cellpadding='0' cellspacing='0' width='100%')
+  table(border='0' width='100%' cellspacing='1' cellpadding='2' style='padding:3px;')
     tr
-      td(colspan='3' style='padding:3px;' valign='top')
-        table(border='0' width='100%' cellspacing='1' cellpadding='2')
-          tr
-            td(width='50%' style='white-space: nowrap;')
-              = 'Фотографий в разделе: '
-              b= totalItems
-            td(align='right')
-              include ../shared/pagination_short
-              +paginationShort(currentPage, totalItems, itemsPerPage, urlToCategory)
+      td(width='50%' style='white-space: nowrap;')
+        = 'Фотографий в разделе: '
+        b= totalItems
+      td(align='right')
+        include ../shared/pagination_short
+        +paginationShort(currentPage, totalItems, itemsPerPage, urlToCategory)
 
-          tr
-            td(colspan='2' align='center')
-              hr
-              table(style='width:100%; min-width:900px' border='0' cellspacing='0' cellpadding='0' align='center')
-                tr
-                  td
-                    ul.gallery-list
-                      each item, index in items
-                        li.gallery-list__item
-                          div#entryID9.entryBlock
-                            span.uphoto
-                              span.photo-block
-                                span.ph-wrap
-                                  span.ph-tc
-                                    img(src=`/images/gallery/thumb/${item.thumbImageInfo.filename}`)
-                                  a.ph-link(href=`/gallery/detail/${item.slug}`)
-                                    span.ph-tc
-                                      span.ph-data
-                                        span.ph-date= item.title
-                                        span.ph-descr Открыть в отдельном окне
-                                span.ph-details.ph-js-details
-                                  span.phd-views= item.views
-                                  span.phd-comments= item.comments.length
-                                  span.phd-rating
-                                    span#entRating9= (Math.round(item.rating * 100) / 100).toFixed(1)
-          tr
-            td(colspan='2' align='center')
-              include ../shared/pagination_long
-              +paginationLong(currentPage, totalItems, itemsPerPage, urlToCategory)
+    tr
+      td(colspan='2' align='center')
+        hr
+        ul.gallery-list
+          each item, index in items
+            li.gallery-list__item
+              .gallery-list__photo-block
+                .gallery-list__top
+                  .gallery-list__img-wrap
+                    img(src=`/images/gallery/thumb/${item.thumbImageInfo.filename}`)
+                  a.gallery-list__link(href=`/gallery/detail/${item.slug}`)
+                    .gallery-list__img-wrap
+                      span.gallery-list__link-data
+                        .gallery-list__link-top= item.title
+                        .gallery-list__link-bottom Открыть в отдельном окне
+                .gallery-list__details
+                  span.gallery-list__views= item.views
+                  span.gallery-list__comments= item.comments.length
+                  span.gallery-list__rating= (Math.round(item.rating * 100) / 100).toFixed(1)
+    tr
+      td(colspan='2' align='center')
+        include ../shared/pagination_long
+        +paginationLong(currentPage, totalItems, itemsPerPage, urlToCategory)
