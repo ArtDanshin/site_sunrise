@@ -1,28 +1,12 @@
 extends ../layouts/application
 
-include ../shared/stars
+include ../shared/category_item
 
 block title
   = pageTitle
 
 block content
-  #allEntries
+  .category-list
     each newsItem in news
-      table.entryTable(border='0' width='100%' cellspacing='1' cellpadding='2')
-        tr
-          td.entryTitleTd(style='width:90%')
-            .entryTitle
-              span.entryTitleLink!= newsItem.title
-          td(align='right' nowrap='nowrap')= newsItem.date
-        tr
-          td.entryBodyTd(colspan='2')!= newsItem.body
-        tr
-          td.entryDetailsTd(colspan='2')
-            | Просмотров: #{newsItem.views} | Добавил:
-            span.entryUserLink= newsItem.author
-            = ' | '
-            span.entryCommentLink &#32;Коментарии (#{newsItem.comments})
-            div(style='float:right')
-              +stars_rating(newsItem.rating.score, newsItem.rating.votes)
-            hr.entryHr
-      br
+      .category-list__item
+        +category_item(newsItem)

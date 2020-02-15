@@ -2,31 +2,34 @@ include ../mixins/formatter
 include ../shared/stars
 
 mixin category_item(itemInfo, url, category)
-  table.entryTable(border='0' width='100%' cellspacing='0' cellpadding='2')
+  table.category-item(border='0' width='100%' cellspacing='0' cellpadding='2')
     tr
-      td.entryTitleTd(width='90%')
-        .entryTitle
-          | &nbsp;
-          a(href=url)= itemInfo.title
+      td(width='90%')
+        | &nbsp;
+        if url
+          a.category-item__title-link(href=url)!= itemInfo.title
+        else
+          span.category-item__title-link!= itemInfo.title
       td(align='right' nowrap)
     tr
-      td.entryBodyTd(colspan='2')
+      td.category-item__preview-body(colspan='2')
         != itemInfo.previewBody
     tr
-      td.entryDetailsTd(colspan='2')
-        a.e-category(href=category.url)= category.title
-        = ' | '
-        = 'Просмотров: '
-        span.entryReads= itemInfo.views
-
+      td.category-item__details-td(colspan='2')
+        if category
+          a.category-item__link(href=category.url)= category.title
+          = ' | '
+        = `Просмотров: ${itemInfo.views}`
         if itemInfo.loads
           = ` | Загрузок: ${itemInfo.loads}`
-
         = ` | Добавил: ${itemInfo.author}`
         = ' | Дата: '
         +dateFormatter(itemInfo.publishDate)
         = ' | '
-        a.entryCommentLink(href=url)= `Коментарии (${itemInfo.comments.length})`
+        if url
+          a.category-item__link(href=url)= `Коментарии (${itemInfo.comments.length})`
+        else
+          = `Коментарии (${itemInfo.comments.length || itemInfo.comments})`
 
-        div(style='float:right')
+        .category-item__rating
           +stars_rating(itemInfo.rating.score, itemInfo.rating.votes)
