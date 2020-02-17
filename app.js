@@ -12,7 +12,7 @@ global.appRoot = path.resolve(__dirname);
 
 // view engine setup
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app', 'views'));
 
 app.use(logger('dev'));
 app.use(express.json());
