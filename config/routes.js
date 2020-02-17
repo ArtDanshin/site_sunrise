@@ -1,10 +1,12 @@
-const root     = require('../controllers/root');
-const gallery  = require('../controllers/gallery');
-const video    = require('../controllers/video');
-const files    = require('../controllers/files');
-const articles = require('../controllers/articles');
-const lod      = require('../controllers/lod');
-const shana    = require('../controllers/shana');
+const CONTROLLERS_FOLDER = '../app/controllers';
+
+const root     = require(`${CONTROLLERS_FOLDER}/root`);
+const gallery  = require(`${CONTROLLERS_FOLDER}/gallery`);
+const video    = require(`${CONTROLLERS_FOLDER}/video`);
+const files    = require(`${CONTROLLERS_FOLDER}/files`);
+const articles = require(`${CONTROLLERS_FOLDER}/articles`);
+const lod      = require(`${CONTROLLERS_FOLDER}/lod`);
+const shana    = require(`${CONTROLLERS_FOLDER}/shana`);
 
 module.exports = app => {
   app.get('/', root.home);
