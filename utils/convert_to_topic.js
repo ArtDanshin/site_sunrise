@@ -2,26 +2,69 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 
+processDb('video', 'videos', 'video')
+  .then(() => processDb('files', 'files', 'file'))
+  .then(() => processDb('articles', 'articles', 'article'))
+  .then(() => processDb('news', 'news', 'news'))
+  .then(() => processDb('gallery', 'images', 'image'));
+
+async function processDb(dbName, propTopics, newType) {
+  let topics;
+
+  try {
+    topics = await getDbFile('topics');
+  } catch {
+    topics = [];
+  }
+
+  let categories;
+
+  try {
+    categories = await getDbFile('categories');
+  } catch {
+    categories = [];
+  }
+
+  const oldDb = await getDbFile(dbName);
+  const processedTopics = processTopics(oldDb[propTopics] || oldDb, newType, topics.length);
+  topics = topics.concat(processedTopics);
+
+
+  if (oldDb.categories) {
+    const processedCategories = oldDb.categories && processCategories(oldDb.categories);
+
+    categories = categories.concat(processedCategories);
+  }
+
+  await writeDbFile('topics', topics);
+  await writeDbFile('categories', categories);
+};
+
 async function getDbFile(type) {
   const reader = util.promisify(fs.readFile);
+
   const json = await reader(path.join(__dirname, '..', 'db', `${type}.json`), 'utf8');
 
   return JSON.parse(json);
 }
 
-function processTopics(json, nowType, finalType, beginIndex) {
-  const topics = json[nowType];
+async function writeDbFile(type, data) {
+  const writer = util.promisify(fs.writeFile);
 
+  await writer(path.join(__dirname, '..', 'db', `${type}.json`), JSON.stringify(data));
+}
+
+function processTopics(topics, finalType, beginIndex) {
   return topics.map((topic, index) => ({
     type: finalType,
     title: topic.title,
     slug: topic.slug
       ? formatSlug(topic.slug, beginIndex + index)
-      : `${index}-${finalType}`,
-    category: topic.category,
+      : `${beginIndex + index}-${finalType}`,
+    category: topic.category || null,
     views: topic.views,
     author: topic.author,
-    rating: Number.isInteger(topic.comments)
+    rating: typeof topic.rating === 'number'
       ? {
         score: topic.rating,
         votes: topic.rating > 0 ? 1 : 0
@@ -54,6 +97,14 @@ function processTopics(json, nowType, finalType, beginIndex) {
   }))
 }
 
+function processCategories(categories) {
+  return categories.map(category => ({
+    slug: snakeToKebab(category.slug),
+    title: category.title,
+    description: category.description || null
+  }))
+}
+
 function formatSlug(slug, newNumber) {
   let newSlug = slug.replace(/^(\d+_)/gm, '');
 
@@ -61,7 +112,7 @@ function formatSlug(slug, newNumber) {
 }
 
 function snakeToKebab(string) {
-  return string.replace('_', '-');
+  return string.replace(/_/g, '-');
 }
 
 function numberToEmptyArray(num) {
@@ -73,6 +124,3 @@ function numberToEmptyArray(num) {
 
   return resultArray;
 }
-
-getDbFile('articles')
-  .then(console.log);
