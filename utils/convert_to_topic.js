@@ -61,7 +61,9 @@ function processTopics(topics, finalType, beginIndex) {
     slug: topic.slug
       ? formatSlug(topic.slug, beginIndex + index)
       : `${beginIndex + index}-${finalType}`,
-    category: topic.category || null,
+    category: topic.category
+      ? topic.category.map(categorySlug => snakeToKebab(categorySlug))
+      : null,
     views: topic.views,
     author: topic.author,
     rating: typeof topic.rating === 'number'
@@ -76,7 +78,7 @@ function processTopics(topics, finalType, beginIndex) {
         fileSize: topic.fileSize
       }
       : null,
-    forTypeGallery: topic.originImageInfo || topic.thumbImageInfo
+    forTypeImage: topic.originImageInfo || topic.thumbImageInfo
       ? {
         originImageInfo: topic.originImageInfo,
         thumbImageInfo: topic.thumbImageInfo

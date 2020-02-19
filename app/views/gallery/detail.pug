@@ -14,17 +14,17 @@ block content
           .gallery-detail__desc= image.description
           .gallery-detail__photo-block
             .gallery-detail__top
-              img.gallery-detail__img(border='0' src=`/images/gallery/${image.originImageInfo.filename}` width=image.originImageInfo.width height=image.originImageInfo.height)
+              img.gallery-detail__img(border='0' src=`/images/gallery/${image.forTypeImage.originImageInfo.filename}` width=image.forTypeImage.originImageInfo.width height=image.forTypeImage.originImageInfo.height)
 
-              a.gallery-detail__tip.ulightbox(href=`/images/gallery/${image.originImageInfo.filename}` target='_blank')
+              a.gallery-detail__tip.ulightbox(href=`/images/gallery/${image.forTypeImage.originImageInfo.filename}` target='_blank')
                 i.gallery-detail__expand-ico
                 | В реальном размере
-                b= ` ${image.originImageInfo.width}x${image.originImageInfo.height}`
-                = ` / ${image.originImageInfo.size / 1000}Kb`
+                b= ` ${image.forTypeImage.originImageInfo.width}x${image.forTypeImage.originImageInfo.height}`
+                = ` / ${image.forTypeImage.originImageInfo.size / 1000}Kb`
             .gallery-detail__details
               span.gallery-detail__views= image.views
               span.gallery-detail__comments= image.comments.length
-              span.gallery-detail__rating= (Math.round(image.rating * 100) / 100).toFixed(1)
+              span.gallery-detail__rating= (Math.round(image.rating.score * 100) / 100).toFixed(1)
         .gallery-detail__slider
           table.gallery-detail__table(border="0" cellpadding="0" cellspacing="0")
             tbody
@@ -35,13 +35,13 @@ block content
                   .gallery-detail__photos
                     a.gallery-detail__other-block._beside(href=`/gallery/detail/${otherImages[0].slug}`)
                       .gallery-detail__other-wrap
-                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[0].thumbImageInfo.filename}`)
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[0].forTypeImage.thumbImageInfo.filename}`)
                     a.gallery-detail__other-block(href=`/gallery/detail/${otherImages[1].slug}`)
                       .gallery-detail__other-wrap
-                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[1].thumbImageInfo.filename}`)
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[1].forTypeImage.thumbImageInfo.filename}`)
                     a.gallery-detail__other-block._beside(href=`/gallery/detail/${otherImages[2].slug}`)
                       .gallery-detail__other-wrap
-                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[2].thumbImageInfo.filename}`)
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[2].forTypeImage.thumbImageInfo.filename}`)
                 td
                   a.gallery-detail__right-swch(href="#" rel="nofollow")
         hr

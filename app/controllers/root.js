@@ -1,8 +1,10 @@
 const path = require('path');
 const fs = require('fs');
 
-exports.home = function(req, res) {
-  const news = JSON.parse(fs.readFileSync(path.join(appRoot, 'db', 'news.json'), 'utf8'));
+const topicModel = require('../models/topics');
+
+exports.home = async function(req, res) {
+  const news = await topicModel.getTopics({ type: 'news'});
 
   res.render('main', { pageTitle: 'Главная страница', news });
 };

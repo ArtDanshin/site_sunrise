@@ -18,6 +18,7 @@ exports.watch = function(cb) {
     watch: [
       'app/controllers/',
       'app/helpers/',
+      'app/models/',
       'app/views/',
       'config/',
       'db/',
