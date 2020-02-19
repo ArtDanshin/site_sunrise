@@ -29,7 +29,7 @@ mixin category_item(itemInfo, url, category)
         if url
           a.category-item__link(href=url)= `Коментарии (${itemInfo.comments.length})`
         else
-          = `Коментарии (${itemInfo.comments.length || itemInfo.comments})`
+          = `Коментарии (${itemInfo.comments.length})`
 
         .category-item__rating
           +stars_rating(itemInfo.rating.score, itemInfo.rating.votes)

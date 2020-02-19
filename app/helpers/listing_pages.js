@@ -1,3 +1,5 @@
+const categoryModel = require('../models/category');
+
 exports.renderCategory = function({ req, res, category, items, itemsPerPage, type }) {
   const template = ['gallery'].includes(type) ? type : 'listings';
 
@@ -42,10 +44,10 @@ exports.renderCategory = function({ req, res, category, items, itemsPerPage, typ
   }
 };
 
-exports.renderDetail = function({ res, item, categories, type }) {
+exports.renderDetail = async function({ res, item, type }) {
   if (item) {
     if (item.mainBody) {
-      const category = categories.find(cat => cat.slug === item.category[0]);
+      const category = await categoryModel.getCategory(item.category[0]);
 
       res.render(`listings/detail`, {
         type,
