@@ -8,6 +8,13 @@ processDb('video', 'videos', 'video')
   .then(() => processDb('news', 'news', 'news'))
   .then(() => processDb('gallery', 'images', 'image'));
 
+/**
+ * Преобразование JSON файла с определенными типами материалов, к единому типу topic
+ * @param {string} dbName - Название JSON файла
+ * @param {string} propTopics - Свойство, в котором находится массив с материалами
+ * @param {string} newType - Название типа топика, которое присвоится материалам обработанного JSON
+ * @returns {Promise<void>}
+ */
 async function processDb(dbName, propTopics, newType) {
   let topics;
 
@@ -40,6 +47,11 @@ async function processDb(dbName, propTopics, newType) {
   await writeDbFile('categories', categories);
 };
 
+/**
+ * Получение базы данных из JSON файла
+ * @param {string} type - Имя JSON файла/типа материала
+ * @returns {Promise<any>}
+ */
 async function getDbFile(type) {
   const reader = util.promisify(fs.readFile);
 
@@ -48,12 +60,25 @@ async function getDbFile(type) {
   return JSON.parse(json);
 }
 
+/**
+ * Запись результатов обработки в JSON файл
+ * @param {string} type - Имя JSON файла/типа материала
+ * @param {string} data - Данные
+ * @returns {Promise<void>}
+ */
 async function writeDbFile(type, data) {
   const writer = util.promisify(fs.writeFile);
 
   await writer(path.join(__dirname, '..', 'db', `${type}.json`), JSON.stringify(data));
 }
 
+/**
+ * Преобразование топиков к единому виду
+ * @param {Array} topics
+ * @param {string} finalType
+ * @param {number} beginIndex - С какого индекса будут проставляться ID(slug) материалам
+ * @returns {Promise<Array>} - Массив обработанных топиков
+ */
 async function processTopics(topics, finalType, beginIndex) {
   const finalTopics = await Promise.all(topics.map(async (topic, index) => {
     const slug = topic.slug
@@ -102,6 +127,11 @@ async function processTopics(topics, finalType, beginIndex) {
   return finalTopics;
 }
 
+/**
+ * Приведение категорий к единому виду
+ * @param {Array} categories
+ * @returns {Array}
+ */
 function processCategories(categories) {
   return categories.map(category => ({
     slug: snakeToKebab(category.slug),
@@ -110,16 +140,30 @@ function processCategories(categories) {
   }))
 }
 
+/**
+ * @param {string} slug
+ * @param {number} newNumber
+ * @returns {string}
+ */
 function formatSlug(slug, newNumber) {
   let newSlug = slug.replace(/^(\d+_)/gm, '');
 
   return `${newNumber}-${snakeToKebab(newSlug)}`;
 }
 
+/**
+ * @param {string} string
+ * @returns {string}
+ */
 function snakeToKebab(string) {
   return string.replace(/_/g, '-');
 }
 
+/**
+ * Создание массива из пустых элементов
+ * @param {number} num - Кол-во пустых элементов, которые нужно сгенерировать
+ * @returns {Array}
+ */
 function numberToEmptyArray(num) {
   const resultArray = [];
 
@@ -130,6 +174,13 @@ function numberToEmptyArray(num) {
   return resultArray;
 }
 
+/**
+ * Переименование картинок в соответствии с новыми ID(slug), и приведение информации о них к единому виду
+ * @param {Object} originImageInfo
+ * @param {Object} thumbImageInfo
+ * @param {string} slug - Новый slug материала
+ * @returns {Promise<{originImageInfo: {filename: string, size: *, width: *, format, height: *}, thumbImageInfo: {filename: string, size: *, width: *, format, height: *}}>}
+ */
 async function imageProcess(originImageInfo, thumbImageInfo, slug) {
   const rename = util.promisify(fs.rename);
 
