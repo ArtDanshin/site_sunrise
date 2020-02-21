@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 const stylus = require('gulp-stylus');
 const nodemon = require('gulp-nodemon');
 
@@ -10,7 +10,7 @@ function styl() {
 
 exports.stylus = stylus;
 
-exports.build = styl;
+exports.build = series(styl);
 exports.watch = function(cb) {
   nodemon({
     script: 'app.js',
