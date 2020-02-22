@@ -1,23 +1,6 @@
 const topicModel = require('../models/topics');
 const categoryModel = require('../models/category');
 
-const { renderCategory } = require('../helpers/listing_pages');
-
-exports.category = async function(req, res) {
-  const images = await topicModel.getTopics({ type: 'image', category: req.params.category });
-  const category = await categoryModel.getCategory(req.params.category);
-  const IMAGES_PER_PAGE = 16;
-
-  renderCategory({
-    req,
-    res,
-    category,
-    items: images,
-    itemsPerPage: IMAGES_PER_PAGE,
-    type: 'gallery'
-  });
-};
-
 exports.image = async function(req, res) {
   const image = await topicModel.getTopic(req.params.image);
 
