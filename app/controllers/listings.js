@@ -1,7 +1,29 @@
+const topicModel = require('../models/topics');
 const categoryModel = require('../models/category');
 
-exports.renderCategory = function({ req, res, category, items, itemsPerPage, type }) {
-  const template = ['gallery'].includes(type) ? type : 'listings';
+const ITEMS_PER_PAGE = {
+  gallery: 16,
+  video: 5,
+  default: 10
+};
+
+const TOPIC_TYPES = {
+  articles: 'article',
+  files: 'file',
+  gallery: 'image'
+};
+
+const TEMPLATE_TYPE = {
+  gallery: 'gallery',
+  default: 'listings'
+};
+
+exports.category = async function(req, res) {
+  const type = req.params.type;
+  const items = await topicModel.getTopics({
+    type: TOPIC_TYPES[type] || type,
+    category: req.params.category });
+  const category = await categoryModel.getCategory(req.params.category);
 
   if (category) {
     const pageNumber = req.params.page && parseInt(req.params.page);
@@ -9,6 +31,7 @@ exports.renderCategory = function({ req, res, category, items, itemsPerPage, typ
     if (pageNumber) {
       const filteredItems = items.filter(file => file.category.includes(req.params.category));
       const totalItems = filteredItems.length;
+      const itemsPerPage = ITEMS_PER_PAGE[type] || ITEMS_PER_PAGE['default'];
 
       if (totalItems) {
         const numberOfFirstFileOnPage = (pageNumber - 1) ? itemsPerPage * (pageNumber - 1): 0;
@@ -16,7 +39,7 @@ exports.renderCategory = function({ req, res, category, items, itemsPerPage, typ
         if (filteredItems[numberOfFirstFileOnPage]) {
           const urlToCategory = `/${type}/${req.params.category}/`;
 
-          res.render(`${template}/category`, {
+          res.render(`${TEMPLATE_TYPE[type] || TEMPLATE_TYPE['default']}/category`, {
             type,
             pageTitle: category.title,
             currentPage: pageNumber,
@@ -44,13 +67,15 @@ exports.renderCategory = function({ req, res, category, items, itemsPerPage, typ
   }
 };
 
-exports.renderDetail = async function({ res, item, type }) {
+exports.detail = async function(req, res) {
+  const item = await topicModel.getTopic(req.params.slug);
+
   if (item) {
     if (item.mainBody) {
       const category = await categoryModel.getCategory(item.category[0]);
 
       res.render(`listings/detail`, {
-        type,
+        type: req.params.type,
         pageTitle: item.title,
         item,
         category
@@ -63,4 +88,4 @@ exports.renderDetail = async function({ res, item, type }) {
   } else {
     res.status(404).end()
   }
-}
+};
