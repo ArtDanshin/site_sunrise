@@ -31,6 +31,7 @@ exports.image = async function(req, res) {
     }
 
     res.render('gallery/detail', {
+      theme: category.theme,
       pageTitle: category.title,
       image,
       otherImages: finalOtherImages

@@ -54,22 +54,22 @@ mixin comments_form(comments)
                     each smile in [{name:'angry',code:'>('},{name:'biggrin',code:':D'},{name:'cool',code:'B)'}]
                       td(align='center')
                         a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                          img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
+                          img(style="margin:0;padding:0;border:0;" src=`/assets/images/smiles/${smile.name}.gif` title=smile.name)
                   tr
                     each smile in [{name:'cry',code:':&bsol;'},{name:'dry',code:'&lt;_&lt;'},{name:'happy',code:'^_^'}]
                       td(align='center')
                         a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                          img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
+                          img(style="margin:0;padding:0;border:0;" src=`/assets/images/smiles/${smile.name}.gif` title=smile.name)
                   tr
                     each smile in [{name:'sad',code:':('},{name:'smile',code:':)'},{name:'surprised',code:':o'}]
                       td(align='center')
                         a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                          img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
+                          img(style="margin:0;padding:0;border:0;" src=`/assets/images/smiles/${smile.name}.gif` title=smile.name)
                   tr
                     each smile in [{name:'tongue',code:':p'},{name:'wacko',code:'%)'},{name:'wink',code:';)'}]
                       td(align='center')
                         a(href='javascript://' onclick=`emoticon('${smile.code}');return false;`)
-                          img(style="margin:0;padding:0;border:0;" src=`/images/smiles/${smile.name}.gif` title=smile.name)
+                          img(style="margin:0;padding:0;border:0;" src=`/assets/images/smiles/${smile.name}.gif` title=smile.name)
                   tr#asmltr(style='display:none;')
                     td#allSmiles(colspan=3 align='center' nowrap)
                       a(href="javascript://" onclick="return false;")
@@ -79,7 +79,7 @@ mixin comments_form(comments)
         td.comm-form__td2
           input(type='text' style='text-align:center' name='code' size=5 maxlength=4)
           | &#32;
-          img(style='margin:0;padding:0;border:0;' align='absmiddle' src='/images/capcha.gif')
+          img(style='margin:0;padding:0;border:0;' align='absmiddle' src='/assets/images/capcha.gif')
       tr
         td.comm-form__td2(colspan=2 align='center')
-          input(type='submit' value='- Добавить комментарий -')
+          input(type='submit' value='- Добавить комментарий -' disabled)

@@ -2,191 +2,253 @@
   {
     "slug": "sns-season1",
     "title": "Shakugan no Shana - 1 сезон",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-season2",
     "title": "Shakugan no Shana - 2 сезон",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-ova",
     "title": "Shakugan no Shana - OVA",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-special",
     "title": "Shakugan no Shana - Спецвыпуски",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-movie",
     "title": "Shakugan no Shana - Полнометражка(Movie)",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-amv",
     "title": "Shakugan no Shana - AMV клипы",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "lod-gamevideo",
     "title": "The Legend of Dragoon - Видео из игры",
-    "description": null
+    "description": null,
+    "theme": "lod"
   },
   {
     "slug": "lod-amv",
     "title": "The Legend of Dragoon - AMV клипы",
-    "description": null
+    "description": null,
+    "theme": "lod"
   },
   {
     "slug": "lod-music",
     "title": "The Legend of Dragoon - Музыкальный архив",
-    "description": null
+    "description": null,
+    "theme": "lod"
   },
   {
     "slug": "psp-psone",
     "title": "PlayStation Portable - Игры PSone",
-    "description": null
+    "description": null,
+    "theme": "old"
   },
   {
     "slug": "lod-psp",
     "title": "The Legend of Dragoon - Версия для PSP",
-    "description": null
+    "description": null,
+    "theme": "lod"
   },
   {
     "slug": "lod",
     "title": "The Legend of Dragoon - Статьи и прохождения",
-    "description": null
+    "description": null,
+    "theme": "lod"
   },
   {
     "slug": "lod-wallpaper",
     "title": "Обои по игре",
-    "description": "Огромное кол-во обоев по игре The Legend of Dragoon"
+    "description": "Огромное кол-во обоев по игре The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "dart-red-dragoon",
     "title": "Дарт (Red-Eye Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Дарта из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Дарта из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "lavitc-jade-dragoon",
     "title": "Лавитц (The Jade Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Лавитца из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Лавитца из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "shana-silver-dragoon",
     "title": "Шана (Silver Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Шаны из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Шаны из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "rose-darkness-dragoon",
     "title": "Rose (Darkness Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Розы из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Розы из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "hashel-violet-dragoon",
     "title": "Хашель (Violet Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Хашела из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Хашела из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "albert-jade-dragoon",
     "title": "Альберт (The Jade Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Альберт из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Альберт из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "meru-blue-sea-dragoon",
     "title": "Меру (Blue-Sea Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Меру из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Меру из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "kongol-golden-dragoon",
     "title": "Конгол (Golden Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Конгола из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Конгола из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "miranda-silver-dragoon",
     "title": "Миранда (White-Silver Dragoon)",
-    "description": "Обои, модели, портреты и многое другое с участием Миранды из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием Миранды из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "other-heroes",
     "title": "Другие герои и персонажи",
-    "description": "Обои, модели, портреты и многое другое с участием многих второстепенных персонажей из The Legend of Dragoon"
+    "description": "Обои, модели, портреты и многое другое с участием многих второстепенных персонажей из The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "endiness-world",
     "title": "Мир Endiness и окрестности",
-    "description": "Красивые картины самых разных мест со всего мира Endiness из игры The Legend of Dragoon"
+    "description": "Красивые картины самых разных мест со всего мира Endiness из игры The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "posters",
     "title": "Постеры",
-    "description": "Постеры по мотивам игры The Legend of Dragoon"
+    "description": "Постеры по мотивам игры The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "promo-cd-merc",
     "title": "Промо, CD, Фигурки и т.п.",
-    "description": "Сканы и фотографии различных промо, CD, фигурок и т.п. по мотивам игры The Legend of Dragoon"
+    "description": "Сканы и фотографии различных промо, CD, фигурок и т.п. по мотивам игры The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "fan-art-lod",
     "title": "Фан-арт по игре",
-    "description": "Творчество фанатов игры The Legend of Dragoon"
+    "description": "Творчество фанатов игры The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "logo",
     "title": "Логотип",
-    "description": "Различные изображения логотипа игры The Legend of Dragoon"
+    "description": "Различные изображения логотипа игры The Legend of Dragoon",
+    "theme": "lod"
   },
   {
     "slug": "sns-jokes",
     "title": "Приколы Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-simple-pics",
     "title": "Простые картинки Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-subpic",
     "title": "Картинки в подпись Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-wallpapers-psp",
     "title": "Обои для PSP Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-avatars",
     "title": "Аватары Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-frames",
     "title": "Кадры из Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-scans",
     "title": "Сканы различных материалов о Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-userbars",
     "title": "Юзербары на тему Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-animation",
     "title": "Анимации Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
   },
   {
     "slug": "sns-wallpapers",
     "title": "Обои Shakugan no Shana",
-    "description": null
+    "description": null,
+    "theme": "sns"
+  },
+  {
+    "slug": "sns-main",
+    "title": "Новости 2-ой версии сайта",
+    "description": null,
+    "theme": "sns"
+  },
+  {
+    "slug": "lod-main",
+    "title": "Новости LoD версии сайта",
+    "description": null,
+    "theme": "lod"
+  },
+  {
+    "slug": "personal-main",
+    "title": "Новости персональной версии сайта",
+    "description": null,
+    "theme": "personal"
+  },
+  {
+    "slug": "old-main",
+    "title": "Новости 1-ой версии сайта",
+    "description": null,
+    "theme": "old"
   }
 ]
