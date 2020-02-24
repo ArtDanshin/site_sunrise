@@ -5,16 +5,24 @@
 
   &__title
     height 24px
-    background url('/images/left.jpg') #000
+    background url('/assets/images/themes/sns/left.jpg') #000
     font-size 11px
     font-family tahoma, sans-serif
     color #fff
     &._wide
       border 1px double #fff
-      background url('/images/4.gif') #fff
+      background url('/assets/images/themes/sns/4.gif') #fff
+  &._lod &__title
+    background-image url('/assets/images/themes/lod/left.jpg')
+    &._wide
+      background-image url('/assets/images/themes/lod/4.gif')
+  &._old &__title
+    background-image url('/assets/images/themes/old/left.jpg')
+    &._wide
+      background-image url('/assets/images/themes/old/4.gif')
 
   &__body
-    background url('/images/5.gif') #fff
+    background url('/assets/images/5.gif') #fff
     padding 5px
     border 3px double #fff
     font-size 11px

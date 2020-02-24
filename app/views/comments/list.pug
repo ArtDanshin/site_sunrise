@@ -16,7 +16,7 @@ mixin comments_list(comments)
               if comment.userInfo.email
                 | &#32;
                 a(href='javascript://' onclick=comment.userInfo.email)
-                  img(border=0 src='/images/email.gif' align='absmiddle' title='E-mail')
+                  img(border=0 src='/assets/images/email.gif' align='absmiddle' title='E-mail')
             td.comm__date-td(width='20%' align='right' nowrap)
               +dateFormatter(comment.date, 'dateTime')
           tr

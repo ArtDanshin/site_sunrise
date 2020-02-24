@@ -1,34 +1,14 @@
 doctype html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"
 html(lang="ru-Ru")
-  head
-    title Silver Dragoon "От заката до рассвета"
-    meta(charset='UTF-8')
-    meta(name='robots' content='index,follow')
-    meta(name='description' content="Silver Dragoon 'От заката до рассвета' - Сайт Silver Dragoon'а о аниме 'Shakugan no Shana' и игре 'Legend of Dragoon'")
-    meta(name='keywords' content='игра psone psx playstation legend of dragoon legendofdragoon мультимедиа games обзор Shakugan no Shana shakugannoshana RUS аниме RPG jRPG сериал обои кадры заставки OVA AMV Itadaki no Hecatetan Shanatan movie полнометражка полнометражный от заката до рассвета закат рассвет фотография фотографии silver dragoon')
-    //meta(name='copyright' content="(c) Silver-Dragoon.UcoZ.Ru")
-    meta(name='revisit-after' content='1 days')
-    link(rel='stylesheet', href='/assets/stylesheets/application.css')
-    script.
-      function Menu(id) {
-        if (document.getElementById(id).style.display == "none") {
-          document.getElementById(id).style.display = "block";
-        }
-        else {
-          document.getElementById(id).style.display = "none";
-        }
-      }
-
-
+  include ../shared/head
   body(bgcolor='#cccccc')
-    table.layout__header(cellspacing='0' cellpadding='0' width='100%' border='0')
-      tbody
-        tr
-          td
-            img(src='/images/banner-left.jpg' width=478)
-          td(width='100%' bgcolor='#000000')
-          td
-            img(src='/images/banner-right.jpg' width=550)
+    case theme
+      when 'lod'
+        include ../shared/headers/lod
+      when 'old'
+        include ../shared/headers/old
+      default
+        include ../shared/headers/sns
 
     table(cellspacing='0' cellpadding='0' width='100%' border='0')
       tr
@@ -39,7 +19,7 @@ html(lang="ru-Ru")
           include ../shared/sidebar_blocks/clock
           include ../shared/sidebar_blocks/personal
         td(valign='top' width='100%' style='padding:0px 10px 0px 10px;')
-          table.site-block(cellspacing='0' cellpadding='0' width='100%' border='0')
+          table.site-block(class=(theme && `_${theme}`) cellspacing='0' cellpadding='0' width='100%' border='0')
             tr
               td.site-block__title._wide(align='center')
                 b

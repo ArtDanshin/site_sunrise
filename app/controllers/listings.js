@@ -40,6 +40,7 @@ exports.category = async function(req, res) {
           const urlToCategory = `/${type}/${req.params.category}/`;
 
           res.render(`${TEMPLATE_TYPE[type] || TEMPLATE_TYPE['default']}/category`, {
+            theme: category.theme,
             type,
             pageTitle: category.title,
             currentPage: pageNumber,
@@ -53,6 +54,7 @@ exports.category = async function(req, res) {
         }
       } else {
         res.render('under_construction', {
+          theme: category.theme,
           pageTitle: category.title
         });
       }
@@ -75,6 +77,7 @@ exports.detail = async function(req, res) {
       const category = await categoryModel.getCategory(item.category[0]);
 
       res.render(`listings/detail`, {
+        theme: category.theme,
         type: req.params.type,
         pageTitle: item.title,
         item,
