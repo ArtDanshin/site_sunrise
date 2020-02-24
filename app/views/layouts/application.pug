@@ -10,16 +10,16 @@ html(lang="ru-Ru")
       default
         include ../shared/headers/sns
 
-    table(cellspacing='0' cellpadding='0' width='100%' border='0')
+    table(cellspacing=0 cellpadding=0 width='100%' border=0)
       tr
-        td(valign='top' width='200')
+        td(valign='top' width=200)
           include ../shared/sidebar_blocks/menu_main
           include ../shared/sidebar_blocks/menu_shana
           include ../shared/sidebar_blocks/menu_lod
           include ../shared/sidebar_blocks/clock
           include ../shared/sidebar_blocks/personal
         td(valign='top' width='100%' style='padding:0px 10px 0px 10px;')
-          table.site-block(class=(theme && `_${theme}`) cellspacing='0' cellpadding='0' width='100%' border='0')
+          table.site-block(class=(theme && `_${theme}`) cellspacing=0 cellpadding=0 width='100%' border=0)
             tr
               td.site-block__title._wide(align='center')
                 b
@@ -29,7 +29,7 @@ html(lang="ru-Ru")
 
                 block content
 
-        td(valign='top' width='200')
+        td(valign='top' width=200)
           include ../shared/sidebar_blocks/poll
           include ../shared/sidebar_blocks/admin-info
           include ../shared/sidebar_blocks/counters

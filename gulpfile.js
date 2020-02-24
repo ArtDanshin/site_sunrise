@@ -5,7 +5,7 @@ const rimraf = require('rimraf');
 const util = require('util');
 
 function styl() {
-  return src('app/assets/stylesheets/application.styl')
+  return src(['app/assets/stylesheets/application.styl', 'app/assets/stylesheets/personal.styl'])
     .pipe(stylus())
     .pipe(dest('public/assets/stylesheets'))
 }

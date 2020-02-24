@@ -1,0 +1,9 @@
+extends ../layouts/personal
+
+include ../shared/category_item
+
+block content
+  .category-list
+    each newsItem in news
+      .category-list__item
+        +category_item(newsItem)

@@ -5,6 +5,7 @@ const gallery  = require(`${CONTROLLERS_FOLDER}/gallery`);
 const lod      = require(`${CONTROLLERS_FOLDER}/lod`);
 const shana    = require(`${CONTROLLERS_FOLDER}/shana`);
 const old      = require(`${CONTROLLERS_FOLDER}/old`);
+const personal = require(`${CONTROLLERS_FOLDER}/personal`);
 const listings = require(`${CONTROLLERS_FOLDER}/listings`);
 
 module.exports = app => {
@@ -31,4 +32,8 @@ module.exports = app => {
   app.get('/shana/music', shana.music);
 
   app.get('/old', old.home);
+
+  app.get('/personal', personal.home);
+  app.get('/personal/projects', personal.projects);
+  app.get('/personal/feedback', personal.feedback);
 };
