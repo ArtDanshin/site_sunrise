@@ -1749,7 +1749,9 @@
     "type": "news",
     "title": "Новое рождение сайта",
     "slug": "52-news",
-    "category": null,
+    "category": [
+      "personal"
+    ],
     "views": 1253,
     "author": "SilverDragoon",
     "rating": {
@@ -1767,7 +1769,9 @@
     "type": "news",
     "title": "Долгожданный перевод сайта на старую тематику",
     "slug": "53-news",
-    "category": null,
+    "category": [
+      "lod-main"
+    ],
     "views": 233,
     "author": "SilverDragoon",
     "rating": {
@@ -1789,7 +1793,10 @@
     "type": "news",
     "title": "Обновление сайта за 9 апреля 2008 года",
     "slug": "54-news",
-    "category": null,
+    "category": [
+      "lod-main",
+      "sns-main"
+    ],
     "views": 254,
     "author": "SilverDragoon",
     "rating": {
@@ -1807,7 +1814,10 @@
     "type": "news",
     "title": "Обновление сайта за 8 апреля 2008 года",
     "slug": "55-news",
-    "category": null,
+    "category": [
+      "lod-main",
+      "sns-main"
+    ],
     "views": 159,
     "author": "SilverDragoon",
     "rating": {
@@ -1825,7 +1835,10 @@
     "type": "news",
     "title": "Возобновление работы сайта / Первые обновления",
     "slug": "56-news",
-    "category": null,
+    "category": [
+      "lod-main",
+      "sns-main"
+    ],
     "views": 263,
     "author": "SilverDragoon",
     "rating": {
@@ -1845,7 +1858,10 @@
     "type": "news",
     "title": "Silver Dragoon - Версия 2 - &quot;От заката до рассвета&quot;",
     "slug": "57-news",
-    "category": null,
+    "category": [
+      "lod-main",
+      "sns-main"
+    ],
     "views": 295,
     "author": "SilverDragoon",
     "rating": {
@@ -1865,7 +1881,9 @@
     "type": "news",
     "title": "Возобновление работы сайта",
     "slug": "58-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 232,
     "author": "SilverDragoon",
     "rating": {
@@ -1883,7 +1901,9 @@
     "type": "news",
     "title": "Обновление сайта и форума 18.06",
     "slug": "59-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 454,
     "author": "SilverDragoon",
     "rating": {
@@ -1905,7 +1925,9 @@
     "type": "news",
     "title": "Обновление сайта и форума 30.05",
     "slug": "60-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 347,
     "author": "SilverDragoon",
     "rating": {
@@ -1923,7 +1945,9 @@
     "type": "news",
     "title": "Обновление музыкального архива 24.05",
     "slug": "61-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 333,
     "author": "SilverDragoon",
     "rating": {
@@ -1941,7 +1965,9 @@
     "type": "news",
     "title": "Новости сайта за период с 8.05 по 20.05",
     "slug": "62-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 315,
     "author": "SilverDragoon",
     "rating": {
@@ -1959,7 +1985,9 @@
     "type": "news",
     "title": "Преобразование сайта. Добавление раздела по PSP",
     "slug": "63-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 111,
     "author": "SilverDragoon",
     "rating": {
@@ -1977,7 +2005,9 @@
     "type": "news",
     "title": "Обновления / Добавления на сайте",
     "slug": "64-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 4,
     "author": "SilverDragoon",
     "rating": {
@@ -1995,7 +2025,9 @@
     "type": "news",
     "title": "Форум",
     "slug": "65-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 14,
     "author": "SilverDragoon",
     "rating": {
@@ -2015,7 +2047,9 @@
     "type": "news",
     "title": "Музыкальный архив",
     "slug": "66-news",
-    "category": null,
+    "category": [
+      "old-main"
+    ],
     "views": 5,
     "author": "SilverDragoon",
     "rating": {

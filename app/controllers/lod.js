@@ -1,3 +1,15 @@
+const topicModel = require('../models/topics');
+
+exports.home = async function(req, res) {
+  const news = await topicModel.getTopics({ type: 'news' , category: 'lod-main' });
+
+  res.render('main', {
+    theme: 'lod',
+    pageTitle: 'Главная страница - The Legend of Dragoon',
+    news
+  });
+};
+
 exports.info = function(req, res) {
   res.render('lod/info', {
     theme: 'lod',
