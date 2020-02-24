@@ -4,7 +4,7 @@ const fs = require('fs');
 const topicModel = require('../models/topics');
 
 exports.home = async function(req, res) {
-  const news = await topicModel.getTopics({ type: 'news'});
+  const news = await topicModel.getTopics({ type: 'news' });
 
   res.render('main', { pageTitle: 'Главная страница', news });
 };

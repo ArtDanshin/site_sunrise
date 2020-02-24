@@ -4,6 +4,7 @@ const root     = require(`${CONTROLLERS_FOLDER}/root`);
 const gallery  = require(`${CONTROLLERS_FOLDER}/gallery`);
 const lod      = require(`${CONTROLLERS_FOLDER}/lod`);
 const shana    = require(`${CONTROLLERS_FOLDER}/shana`);
+const old      = require(`${CONTROLLERS_FOLDER}/old`);
 const listings = require(`${CONTROLLERS_FOLDER}/listings`);
 
 module.exports = app => {
@@ -20,10 +21,14 @@ module.exports = app => {
   app.get('/:type(video|files|articles|gallery)/:category/:page', listings.category);
   app.get('/:type(video|files|articles|gallery)/:category', listings.category);
 
-  app.get('/lod', lod.info);
+  app.get('/lod', lod.home);
+  app.get('/lod/info', lod.info);
   app.get('/lod/worldmap', lod.worldmap);
   app.get('/lod/faq', lod.faq);
 
-  app.get('/shana', shana.info);
+  app.get('/shana', shana.home);
+  app.get('/shana/info', shana.info);
   app.get('/shana/music', shana.music);
+
+  app.get('/old', old.home);
 };
