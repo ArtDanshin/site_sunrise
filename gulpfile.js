@@ -25,8 +25,10 @@ exports.build = series(styl, images);
 exports.watch = function(cb) {
   nodemon({
     script: 'app.js',
+    env: { 'NODE_ENV': 'development' },
     ext: 'js pug json',
     watch: [
+      'app.js',
       'app/controllers/',
       'app/helpers/',
       'app/models/',
