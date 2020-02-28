@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const express = require('express');
+const logger = require('morgan');
 
 const app = express();
 
@@ -11,6 +12,8 @@ global.appRoot = path.resolve(__dirname);
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'app', 'views'));
+
+app.use(logger('dev'));
 
 require('./config/routes.js')(app);
 
