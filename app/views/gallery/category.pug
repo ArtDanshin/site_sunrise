@@ -22,12 +22,12 @@ block content
               .gallery-list__photo-block
                 .gallery-list__top
                   .gallery-list__img-wrap
-                    img(src=`/images/gallery/thumb/${item.forTypeImage.thumbImageInfo.filename}`)
+                    img(src=`/images/gallery/thumb/${item.forTypeImage.thumbImageInfo.filename}` alt=item.title)
                   a.gallery-list__link(href=`/gallery/detail/${item.slug}`)
-                    .gallery-list__img-wrap
+                    span.gallery-list__img-wrap
                       span.gallery-list__link-data
-                        .gallery-list__link-top= item.title
-                        .gallery-list__link-bottom Открыть в отдельном окне
+                        span.gallery-list__link-top= item.title
+                        span.gallery-list__link-bottom Открыть в отдельном окне
                 .gallery-list__details
                   span.gallery-list__views= item.views
                   span.gallery-list__comments= item.comments.length
