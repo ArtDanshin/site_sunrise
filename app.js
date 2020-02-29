@@ -12,6 +12,10 @@ global.appRoot = path.resolve(__dirname);
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'app', 'views'));
+if (app.get('env') === 'development') {
+  app.locals.pretty = true;
+}
+app.locals.doctype = 'html';
 
 app.use(logger('dev'));
 

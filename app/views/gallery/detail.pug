@@ -14,7 +14,7 @@ block content
           .gallery-detail__desc= image.description
           .gallery-detail__photo-block
             .gallery-detail__top
-              img.gallery-detail__img(border='0' src=`/images/gallery/${image.forTypeImage.originImageInfo.filename}` width=image.forTypeImage.originImageInfo.width height=image.forTypeImage.originImageInfo.height)
+              img.gallery-detail__img(border='0' src=`/images/gallery/${image.forTypeImage.originImageInfo.filename}` width=image.forTypeImage.originImageInfo.width height=image.forTypeImage.originImageInfo.height alt=image.title)
 
               a.gallery-detail__tip.ulightbox(href=`/images/gallery/${image.forTypeImage.originImageInfo.filename}` target='_blank')
                 i.gallery-detail__expand-ico
@@ -34,14 +34,14 @@ block content
                 td(align='center' style="white-space: nowrap;")
                   .gallery-detail__photos
                     a.gallery-detail__other-block._beside(href=`/gallery/detail/${otherImages[0].slug}`)
-                      .gallery-detail__other-wrap
-                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[0].forTypeImage.thumbImageInfo.filename}`)
+                      span.gallery-detail__other-wrap
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[0].forTypeImage.thumbImageInfo.filename}` alt=`${otherImages[0].title} (Thumb)`)
                     a.gallery-detail__other-block(href=`/gallery/detail/${otherImages[1].slug}`)
-                      .gallery-detail__other-wrap
-                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[1].forTypeImage.thumbImageInfo.filename}`)
+                      span.gallery-detail__other-wrap
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[1].forTypeImage.thumbImageInfo.filename}` alt=`${otherImages[1].title} (Thumb)`)
                     a.gallery-detail__other-block._beside(href=`/gallery/detail/${otherImages[2].slug}`)
-                      .gallery-detail__other-wrap
-                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[2].forTypeImage.thumbImageInfo.filename}`)
+                      span.gallery-detail__other-wrap
+                        img.gallery-detail__other-img(border="0" src=`/images/gallery/thumb/${otherImages[2].forTypeImage.thumbImageInfo.filename}` alt=`${otherImages[2].title} (Thumb)`)
                 td
                   a.gallery-detail__right-swch(href="#" rel="nofollow")
         hr

@@ -16,12 +16,12 @@ mixin comments_list(comments)
               if comment.userInfo.email
                 | &#32;
                 a(href='javascript://' onclick=comment.userInfo.email)
-                  img(border=0 src='/assets/images/email.gif' align='absmiddle' title='E-mail')
+                  img(border=0 src='/assets/images/email.gif' style='vertical-align:middle;' title='E-mail' alt='E-mail')
             td.comm__date-td(width='20%' align='right' nowrap)
               +dateFormatter(comment.date, 'dateTime')
           tr
             td.comm__body(width='100%' colspan=3)
               if comment.userInfo.avatar
                 a.comm__avatar(href='#' title=comment.userInfo.name)
-                  img(alt src=comment.userInfo.avatar.src width='30' height='30' border='0')
+                  img(alt='Аватар' src=comment.userInfo.avatar.src width='30' height='30' border='0')
               != comment.body
