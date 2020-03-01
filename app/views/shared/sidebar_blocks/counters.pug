@@ -4,7 +4,10 @@ block title_sideblock
   b Рейтинги / Счетчики
 
 block body_sideblock
-  marquee(onmouseover='this.stop()' onmouseout='this.start()' scrollAmount=2 scrollDelay=50 direction='up' height=140)
-    br
-    center
-      img(src='/assets/images/ucoz-counter-new.jpg' height='31' width='88' alt='Счетчик')
+  //- Раньше здесь использовался тэг marquee(onmouseover='this.stop()' onmouseout='this.start()' scrollAmount=2 scrollDelay=50 direction='up' height=140)
+  //- но он не проходил валидацию, потому переписано на CSS
+  //- P.S. CSS решение работает хуже(видны подергивания и/или перерисовки)
+  .marquee
+    .marquee__slider
+      center
+        img(src='/assets/images/ucoz-counter-new.jpg' height='31' width='88' alt='Счетчик')
